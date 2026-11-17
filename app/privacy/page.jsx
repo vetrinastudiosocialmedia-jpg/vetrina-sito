@@ -75,7 +75,8 @@ export default function Page() {
           <strong>WhatsApp (Meta)</strong>
           {" "}– se scegli di scriverci su WhatsApp;
         </li>
-        <li>eventuali piattaforme di pagamento e consulenti fiscali, solo per i clienti e solo per quanto necessario.</li>
+        <li><strong>PayPal (Europe) S.à r.l. et Cie, S.C.A.</strong> – gestione dei pagamenti e degli abbonamenti, solo per i clienti;</li>
+        <li>eventuali consulenti fiscali, solo per i clienti e solo per quanto necessario.</li>
       </ul>
       <p>Alcuni di questi fornitori possono trattare dati fuori dall’Unione Europea, in particolare negli Stati Uniti. In questi casi il trasferimento avviene sulla base di garanzie previste dal GDPR, come la decisione di adeguatezza UE-USA (Data Privacy Framework) o le clausole contrattuali standard della Commissione Europea.</p>
       <h2>7. I tuoi diritti</h2>

@@ -34,9 +34,9 @@ export default function Page() {
       <h2>2. Prezzi e prezzo di lancio</h2>
       <p>I prezzi sono quelli indicati sul sito al momento dell’acquisto. Il prezzo di lancio è riservato ai primi 5 clienti e resta bloccato finché l’abbonamento rimane attivo senza interruzioni. Se disdici e in seguito riattivi un piano, si applica il prezzo normale in vigore in quel momento.</p>
       <h2>3. Pagamento e rinnovo</h2>
-      <p>I piani mensili si pagano in anticipo, all’inizio di ogni periodo, tramite la piattaforma di pagamento indicata sul sito, e si rinnovano automaticamente ogni mese fino alla disdetta. I servizi una tantum, come il Sito Vetrina, si pagano al momento dell’ordine.</p>
+      <p>I piani mensili si pagano in anticipo, all’inizio di ogni periodo, tramite PayPal (con conto PayPal o carta), e si rinnovano automaticamente ogni mese fino alla disdetta. I servizi una tantum, come il Sito Vetrina, si pagano al momento dell’ordine.</p>
       <h2>4. Durata e disdetta</h2>
-      <p>Tutti i piani sono senza vincoli di durata: puoi disdire quando vuoi scrivendoci via email o WhatsApp. La disdetta ha effetto dal mese successivo; il mese già pagato resta valido e i contenuti relativi vengono consegnati regolarmente. Gli importi già pagati non vengono rimborsati.</p>
+      <p>Tutti i piani sono senza vincoli di durata: puoi disdire quando vuoi annullando l’abbonamento dal tuo conto PayPal oppure scrivendoci via email o WhatsApp. La disdetta ha effetto dal mese successivo; il mese già pagato resta valido e i contenuti relativi vengono consegnati regolarmente. Gli importi già pagati non vengono rimborsati.</p>
       <h2>5. Come lavoriamo e tempi di consegna</h2>
       <ul>
         <li>Dopo l’attivazione ti chiediamo di compilare un modulo con le informazioni sulla tua attività.</li>
