@@ -1,4 +1,5 @@
-import { paypalLink, waLink } from "@/lib/site";
+import { waLink } from "@/lib/site";
+import PlanButton from "@/components/PlanButton";
 
 // Piani Essenziale, Crescita e Pro con i prezzi
 export default function Pacchetti() {
@@ -51,7 +52,7 @@ export default function Pacchetti() {
                 Foto migliorate
               </li>
             </ul>
-            <a className="vs-btn" href={paypalLink("essenziale")} style={{ marginTop: "auto", display: "flex", alignItems: "center", justifyContent: "center", gap: "10px", minHeight: "52px", borderRadius: "999px", border: "1px solid rgba(243,236,221,0.35)", color: "#F3ECDD", fontWeight: "700", textDecoration: "none", fontSize: "15.5px" }}>Scegli Essenziale</a>
+            <PlanButton plan="essenziale" className="vs-btn" style={{ marginTop: "auto", display: "flex", alignItems: "center", justifyContent: "center", gap: "10px", minHeight: "52px", borderRadius: "999px", border: "1px solid rgba(243,236,221,0.35)", color: "#F3ECDD", fontWeight: "700", textDecoration: "none", fontSize: "15.5px" }}>Scegli Essenziale</PlanButton>
           </article>
           <article style={{ position: "relative", padding: "38px 34px", borderRadius: "28px", background: "#26301E", border: "1px solid rgba(243,236,221,0.12)", display: "flex", flexDirection: "column" }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "12px" }}>
@@ -93,7 +94,7 @@ export default function Pacchetti() {
                 Foto migliorate
               </li>
             </ul>
-            <a className="vs-btn" href={paypalLink("crescita")} style={{ marginTop: "auto", display: "flex", alignItems: "center", justifyContent: "center", gap: "10px", minHeight: "52px", borderRadius: "999px", border: "1px solid rgba(243,236,221,0.35)", color: "#F3ECDD", fontWeight: "700", textDecoration: "none", fontSize: "15.5px" }}>Scegli Crescita</a>
+            <PlanButton plan="crescita" className="vs-btn" style={{ marginTop: "auto", display: "flex", alignItems: "center", justifyContent: "center", gap: "10px", minHeight: "52px", borderRadius: "999px", border: "1px solid rgba(243,236,221,0.35)", color: "#F3ECDD", fontWeight: "700", textDecoration: "none", fontSize: "15.5px" }}>Scegli Crescita</PlanButton>
           </article>
           <article style={{ position: "relative", padding: "38px 34px", borderRadius: "28px", background: "linear-gradient(165deg, #3A4A2B 0%, #2B3522 70%)", border: "1.5px solid #D4AE6A", display: "flex", flexDirection: "column", boxShadow: "0 50px 80px -40px rgba(212,174,106,0.35)" }}>
             <div style={{ position: "absolute", top: "-15px", left: "34px", padding: "6px 14px", borderRadius: "999px", background: "#E0793A", color: "#1C2316", fontSize: "12px", fontWeight: "800", letterSpacing: "0.12em", textTransform: "uppercase" }}>Il più conveniente</div>
@@ -142,7 +143,7 @@ export default function Pacchetti() {
                 Promemoria su WhatsApp il giorno in cui pubblicare
               </li>
             </ul>
-            <a className="vs-btn" href={paypalLink("pro")} style={{ marginTop: "auto", display: "flex", alignItems: "center", justifyContent: "center", gap: "10px", minHeight: "52px", borderRadius: "999px", background: "#E0793A", color: "#1C2316", fontWeight: "800", textDecoration: "none", fontSize: "15.5px" }}>Scegli Pro</a>
+            <PlanButton plan="pro" className="vs-btn" style={{ marginTop: "auto", display: "flex", alignItems: "center", justifyContent: "center", gap: "10px", minHeight: "52px", borderRadius: "999px", background: "#E0793A", color: "#1C2316", fontWeight: "800", textDecoration: "none", fontSize: "15.5px" }}>Scegli Pro</PlanButton>
           </article>
         </div>
         <div style={{ margin: "32px auto 0", maxWidth: "760px", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "center", gap: "10px 14px", textAlign: "center", fontSize: "15px", color: "#CFC8B4" }}>

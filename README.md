@@ -20,6 +20,8 @@ Feito em **Next.js** (exportação estática) e hospedado no **GitHub Pages**. A
 | Contato | `components/Contatti.jsx` |
 | Rodapé | `components/Footer.jsx` |
 | Botão flutuante do WhatsApp | `components/WhatsAppFloat.jsx` |
+| Página de boas-vindas com questionário (depois do pagamento) | `components/Benvenuto.jsx` (endereço: /benvenuto/) |
+| Planos do PayPal (códigos P-…) | **não ficam no código**: veja "Variáveis de ambiente" |
 | Privacy, Cookie, Termini | `app/privacy/page.jsx`, `app/cookie/page.jsx`, `app/termini/page.jsx` |
 | Título e descrição para o Google | `app/layout.jsx` |
 | Estilos gerais e versão para celular | `app/globals.css` |
@@ -43,3 +45,12 @@ npm run build   # gera o site estático na pasta out/
 ## Domínio
 
 O arquivo `public/CNAME` diz ao GitHub Pages que o site responde em `vetrinastudiosocial.it`. O DNS fica na Aruba.
+
+## Variáveis de ambiente (.env)
+
+Os códigos dos planos do PayPal não ficam no repositório.
+
+- **No GitHub:** Settings → Secrets and variables → Actions → **Secrets**: `PAYPAL_PLAN_ESSENZIALE`, `PAYPAL_PLAN_CRESCITA`, `PAYPAL_PLAN_PRO`. A publicação automática usa esses valores na hora de montar o site.
+- **No computador (opcional):** copie `.env.example` para `.env.local` e preencha. O `.env.local` nunca vai para o GitHub.
+
+Atenção: num site estático, o que aparece na página (como o link de assinatura do PayPal) fica visível para quem visita. Os códigos de plano não são senhas: ninguém consegue mexer no seu PayPal com eles. A **Secret** do app do PayPal, essa sim, nunca deve ir para o site nem para o repositório.
