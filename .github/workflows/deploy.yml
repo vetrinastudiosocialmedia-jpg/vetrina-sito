@@ -44,6 +44,10 @@ jobs:
           node-version: 20
       - run: npm install --no-audit --no-fund
       - run: npm run build
+              env:
+          NEXT_PUBLIC_PAYPAL_PLAN_ESSENZIALE: ${{ secrets.PAYPAL_PLAN_ESSENZIALE }}
+          NEXT_PUBLIC_PAYPAL_PLAN_CRESCITA: ${{ secrets.PAYPAL_PLAN_CRESCITA }}
+          NEXT_PUBLIC_PAYPAL_PLAN_PRO: ${{ secrets.PAYPAL_PLAN_PRO }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
