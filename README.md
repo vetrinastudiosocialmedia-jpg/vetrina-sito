@@ -27,6 +27,11 @@ Feito em **Next.js** (exportação estática) e hospedado no **GitHub Pages**. A
 
 A ordem das seções está em `app/page.jsx`.
 
+## Atualizar o site pelo navegador
+
+1. Recebeu um `.zip` novo com os arquivos do site? Abra **Add file → Upload files** neste repositório, arraste o `.zip` e clique em **Commit changes**.
+2. A publicação automática extrai o arquivo, salva os arquivos no repositório e publica o site em 2–3 minutos (acompanhe na aba **Actions**).
+
 ## Rodar no computador (opcional)
 
 ```bash
