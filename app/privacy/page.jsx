@@ -75,7 +75,8 @@ export default function Page() {
           <strong>WhatsApp (Meta)</strong>
           {" "}– se scegli di scriverci su WhatsApp;
         </li>
-        <li><strong>PayPal (Europe) S.à r.l. et Cie, S.C.A.</strong> – gestione dei pagamenti e degli abbonamenti, solo per i clienti;</li>
+        <li><strong>Stripe Payments Europe, Ltd.</strong> – pagina di pagamento, gestione dei pagamenti e degli abbonamenti, solo per i clienti;</li>
+        <li><strong>PayPal (Europe) S.à r.l. et Cie, S.C.A.</strong> e <strong>Satispay Europe S.A.</strong> – solo se scegli di pagare con questi metodi;</li>
         <li>eventuali consulenti fiscali, solo per i clienti e solo per quanto necessario.</li>
       </ul>
       <p>Alcuni di questi fornitori possono trattare dati fuori dall’Unione Europea, in particolare negli Stati Uniti. In questi casi il trasferimento avviene sulla base di garanzie previste dal GDPR, come la decisione di adeguatezza UE-USA (Data Privacy Framework) o le clausole contrattuali standard della Commissione Europea.</p>

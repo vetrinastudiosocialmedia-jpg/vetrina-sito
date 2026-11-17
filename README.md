@@ -21,7 +21,7 @@ Feito em **Next.js** (exportação estática) e hospedado no **GitHub Pages**. A
 | Rodapé | `components/Footer.jsx` |
 | Botão flutuante do WhatsApp | `components/WhatsAppFloat.jsx` |
 | Página de boas-vindas com questionário (depois do pagamento) | `components/Benvenuto.jsx` (endereço: /benvenuto/) |
-| Planos do PayPal (códigos P-…) | **não ficam no código**: veja "Variáveis de ambiente" |
+| Links de pagamento Stripe e planos do PayPal | **não ficam no código**: veja "Variáveis de ambiente" |
 | Privacy, Cookie, Termini | `app/privacy/page.jsx`, `app/cookie/page.jsx`, `app/termini/page.jsx` |
 | Título e descrição para o Google | `app/layout.jsx` |
 | Estilos gerais e versão para celular | `app/globals.css` |
@@ -50,7 +50,7 @@ O arquivo `public/CNAME` diz ao GitHub Pages que o site responde em `vetrinastud
 
 Os códigos dos planos do PayPal não ficam no repositório.
 
-- **No GitHub:** Settings → Secrets and variables → Actions → **Secrets**: `PAYPAL_PLAN_ESSENZIALE`, `PAYPAL_PLAN_CRESCITA`, `PAYPAL_PLAN_PRO`. A publicação automática usa esses valores na hora de montar o site.
+- **No GitHub:** Settings → Secrets and variables → Actions → **Secrets**: `STRIPE_LINK_ESSENZIALE`, `STRIPE_LINK_CRESCITA`, `STRIPE_LINK_PRO` (checkout Stripe, têm prioridade) e `PAYPAL_PLAN_ESSENZIALE`, `PAYPAL_PLAN_CRESCITA`, `PAYPAL_PLAN_PRO` (usados só se faltar o link Stripe). A publicação automática usa esses valores na hora de montar o site.
 - **No computador (opcional):** copie `.env.example` para `.env.local` e preencha. O `.env.local` nunca vai para o GitHub.
 
 Atenção: num site estático, o que aparece na página (como o link de assinatura do PayPal) fica visível para quem visita. Os códigos de plano não são senhas: ninguém consegue mexer no seu PayPal com eles. A **Secret** do app do PayPal, essa sim, nunca deve ir para o site nem para o repositório.

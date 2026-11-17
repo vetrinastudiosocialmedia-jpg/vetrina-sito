@@ -66,10 +66,13 @@ export default function Benvenuto() {
     evitare: "",
   });
   const [inviato, setInviato] = useState(false);
+  const [pagato, setPagato] = useState(false);
 
   useEffect(() => {
-    const p = new URLSearchParams(window.location.search).get("piano");
+    const q = new URLSearchParams(window.location.search);
+    const p = q.get("piano");
     if (p && PIANI[p]) setF((v) => ({ ...v, piano: PIANI[p] }));
+    if (q.get("pagato") === "1") setPagato(true);
   }, []);
 
   useEffect(() => {
@@ -89,7 +92,7 @@ export default function Benvenuto() {
     `Settore: ${f.settore || "-"}`,
     `Città: ${f.citta || "-"}`,
     `Instagram: ${f.instagram || "-"}`,
-    `Email usata per PayPal: ${f.email || "-"}`,
+    `Email usata per il pagamento: ${f.email || "-"}`,
     "",
     `Cosa offriamo: ${f.offerta || "-"}`,
     `Clienti ideali: ${f.clienti || "-"}`,
@@ -136,12 +139,14 @@ export default function Benvenuto() {
           Raccontaci la tua <em style={{ color: "#8A4B32" }}>attività</em>.
         </h1>
         <p style={{ margin: "16px 0 0", fontSize: "17px", lineHeight: 1.65, color: C.soft, maxWidth: "640px" }}>
-          Se hai appena scelto un piano, completa il pagamento nella finestra di PayPal che si è aperta. Poi compila questo modulo: ci serve per preparare i tuoi contenuti.
+          {pagato
+            ? "Pagamento ricevuto, grazie! Ora compila questo modulo: ci serve per preparare i tuoi contenuti."
+            : "Se hai appena scelto un piano, completa prima il pagamento. Poi compila questo modulo: ci serve per preparare i tuoi contenuti."}
         </p>
 
         <ol style={{ listStyle: "none", margin: "32px 0 0", padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(220px, 100%), 1fr))", gap: "12px" }}>
           {[
-            ["1", "Pagamento su PayPal", "Nella finestra che si è aperta."],
+            ["1", pagato ? "Pagamento fatto ✓" : "Pagamento", pagato ? "Ricevuto, grazie!" : "Con carta, PayPal o Satispay."],
             ["2", "Questo modulo", "Circa 5 minuti."],
             ["3", "Logo e foto", "Su WhatsApp, dopo l'invio."],
           ].map(([n, t, d]) => (
@@ -211,7 +216,7 @@ export default function Benvenuto() {
             <input id="b-ig" value={f.instagram} onChange={set("instagram")} placeholder="@tuaattivita" style={input} />
           </Field>
           <div style={{ gridColumn: "1 / -1" }}>
-            <Field id="b-email" title="Email usata per pagare su PayPal" help="(così colleghiamo il pagamento a te)">
+            <Field id="b-email" title="Email usata per il pagamento" help="(così colleghiamo il pagamento a te)">
               <input id="b-email" type="email" value={f.email} onChange={set("email")} style={input} />
             </Field>
           </div>

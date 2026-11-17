@@ -162,7 +162,7 @@ export default function Pacchetti() {
               <rect x="4.5" y="10.5" width="15" height="10" rx="2.5" />
               <path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" />
             </svg>
-            Pagamento sicuro con PayPal o carta
+            Pagamento sicuro con carta, PayPal o Satispay
           </span>
           <span>
             Hai domande prima di attivare?{" "}
