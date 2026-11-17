@@ -48,6 +48,9 @@ jobs:
           NEXT_PUBLIC_PAYPAL_PLAN_ESSENZIALE: ${{ secrets.PAYPAL_PLAN_ESSENZIALE }}
           NEXT_PUBLIC_PAYPAL_PLAN_CRESCITA: ${{ secrets.PAYPAL_PLAN_CRESCITA }}
           NEXT_PUBLIC_PAYPAL_PLAN_PRO: ${{ secrets.PAYPAL_PLAN_PRO }}
+          NEXT_PUBLIC_STRIPE_LINK_ESSENZIALE: ${{ secrets.STRIPE_LINK_ESSENZIALE }}
+          NEXT_PUBLIC_STRIPE_LINK_CRESCITA: ${{ secrets.STRIPE_LINK_CRESCITA }}
+          NEXT_PUBLIC_STRIPE_LINK_PRO: ${{ secrets.STRIPE_LINK_PRO }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
