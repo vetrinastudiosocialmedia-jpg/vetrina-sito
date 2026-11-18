@@ -51,6 +51,7 @@ jobs:
           NEXT_PUBLIC_STRIPE_LINK_ESSENZIALE: ${{ secrets.STRIPE_LINK_ESSENZIALE }}
           NEXT_PUBLIC_STRIPE_LINK_CRESCITA: ${{ secrets.STRIPE_LINK_CRESCITA }}
           NEXT_PUBLIC_STRIPE_LINK_PRO: ${{ secrets.STRIPE_LINK_PRO }}
+          NEXT_PUBLIC_UMAMI_WEBSITE_ID: ${{ secrets.UMAMI_WEBSITE_ID }}
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
