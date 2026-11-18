@@ -1,0 +1,20 @@
+# Vetrina Studio – vetrinastudiosocial.it
+# Il sito è aperto a motori di ricerca e assistenti IA, anche ai robot di addestramento
+# (scelta della titolare, 18/11/2026). La pagina /benvenuto/ non va su Google grazie al
+# suo "noindex": per questo non è bloccata qui (altrimenti il robot non lo leggerebbe).
+
+User-agent: *
+Allow: /
+
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: PerplexityBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://vetrinastudiosocial.it/sitemap.xml

@@ -1,6 +1,7 @@
 import LegalLayout from "@/components/LegalLayout";
+import { UMAMI_ID } from "@/lib/track";
 
-export const metadata = { title: "Cookie policy – Vetrina Studio" };
+export const metadata = { title: "Cookie policy – Vetrina Studio", description: "Quali cookie usa il sito vetrinastudiosocial.it di Vetrina Studio: nessun cookie di profilazione o di statistica, solo eventuali cookie tecnici.", alternates: { canonical: "https://vetrinastudiosocial.it/cookie/" } };
 
 export default function Page() {
   return (
@@ -8,7 +9,7 @@ export default function Page() {
       <div className="box">
         <p>
           In breve:{" "}
-          <strong>questo sito non usa cookie di profilazione né strumenti di statistica</strong>
+          <strong>{UMAMI_ID ? "questo sito non usa cookie di profilazione e misura le visite senza cookie" : "questo sito non usa cookie di profilazione né strumenti di statistica"}</strong>
           . Per questo non ti mostriamo un banner per i cookie.
         </p>
       </div>
@@ -22,6 +23,12 @@ export default function Page() {
       </p>
       <h2>3. Servizi di terze parti</h2>
       <ul>
+        {UMAMI_ID ? (
+          <li>
+            <strong>Umami (statistiche anonime):</strong>
+            {" "}conta le visite e i clic sui pulsanti principali senza usare cookie e senza salvare il tuo indirizzo IP né dati che ti identificano. I dati sono aggregati e servono solo a capire come migliorare il sito.
+          </li>
+        ) : null}
         <li>
           <strong>Link a WhatsApp e Instagram:</strong>
           {" "}se clicchi su questi link lasci il nostro sito e si applicano le informative di Meta.

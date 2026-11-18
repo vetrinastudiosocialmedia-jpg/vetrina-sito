@@ -1,4 +1,5 @@
 import { waLink } from "@/lib/site";
+import { ev } from "@/lib/track";
 
 // Offerta Sito Vetrina, manutenzione e combo
 export default function SitiWeb() {
@@ -64,7 +65,7 @@ export default function SitiWeb() {
             {" "}· 2 aggiornamenti al mese. Il dominio è intestato a te, con costo a parte.
           </div>
           <div style={{ marginTop: "32px", display: "flex", flexWrap: "wrap", alignItems: "center", gap: "18px 28px" }}>
-            <a className="vs-btn" href={waLink("Ciao! Vorrei il Sito Vetrina.")} style={{ display: "inline-flex", alignItems: "center", gap: "12px", minHeight: "56px", padding: "0 28px", borderRadius: "999px", background: "#F3ECDD", color: "#1C2316", textDecoration: "none", fontSize: "16px", fontWeight: "700" }}>
+            <a className="vs-btn" href={waLink("Ciao! Vorrei il Sito Vetrina.")} {...ev("WhatsApp", { origine: "sito-vetrina" })} style={{ display: "inline-flex", alignItems: "center", gap: "12px", minHeight: "56px", padding: "0 28px", borderRadius: "999px", background: "#F3ECDD", color: "#1C2316", textDecoration: "none", fontSize: "16px", fontWeight: "700" }}>
               Richiedi il tuo sito
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M5 12h14M13 6l6 6-6 6" />
@@ -98,7 +99,7 @@ export default function SitiWeb() {
               con 6 mesi di piano Pro.
             </div>
           </div>
-          <a className="vs-btn" href={waLink("Ciao! Mi interessa la combo Sito Vetrina + piano Pro.")} style={{ display: "inline-flex", alignItems: "center", minHeight: "50px", padding: "0 24px", borderRadius: "999px", background: "#1C2316", color: "#F3ECDD", textDecoration: "none", fontSize: "15px", fontWeight: "700" }}>Voglio la combo</a>
+          <a className="vs-btn" href={waLink("Ciao! Mi interessa la combo Sito Vetrina + piano Pro.")} {...ev("WhatsApp", { origine: "combo-sito-pro" })} style={{ display: "inline-flex", alignItems: "center", minHeight: "50px", padding: "0 24px", borderRadius: "999px", background: "#1C2316", color: "#F3ECDD", textDecoration: "none", fontSize: "15px", fontWeight: "700" }}>Voglio la combo</a>
         </div>
       </div>
     </section>

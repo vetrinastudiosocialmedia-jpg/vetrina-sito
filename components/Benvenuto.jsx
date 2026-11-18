@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { SITE, waLink } from "@/lib/site";
+import { track } from "@/lib/track";
 
 // Modulo di benvenuto: il cliente racconta la sua attività dopo aver attivato il piano.
 // Le risposte vengono inviate su WhatsApp (o via email) come messaggio già scritto.
@@ -72,7 +73,16 @@ export default function Benvenuto() {
     const q = new URLSearchParams(window.location.search);
     const p = q.get("piano");
     if (p && PIANI[p]) setF((v) => ({ ...v, piano: PIANI[p] }));
-    if (q.get("pagato") === "1") setPagato(true);
+    if (q.get("pagato") === "1") {
+      setPagato(true);
+      // Una sola volta per sessione, anche se la pagina viene ricaricata
+      let giaContato = false;
+      try {
+        giaContato = sessionStorage.getItem("vs-pagamento") === "1";
+        sessionStorage.setItem("vs-pagamento", "1");
+      } catch {}
+      if (!giaContato) track("Pagamento", { piano: PIANI[p] ? p : "sconosciuto" });
+    }
   }, []);
 
   useEffect(() => {
@@ -111,6 +121,7 @@ export default function Benvenuto() {
     e.preventDefault();
     if (!pronto) return;
     setInviato(true);
+    track("Modulo benvenuto", { piano: f.piano || "-" });
     window.open(waLink(testo), "_blank", "noopener");
   }
 

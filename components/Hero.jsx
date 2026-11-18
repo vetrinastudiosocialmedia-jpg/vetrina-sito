@@ -21,8 +21,8 @@ export default function Hero() {
         <nav className="vs-nav vs-hide-sm" aria-label="Menu principale" style={{ display: "flex", flexWrap: "wrap", gap: "32px", fontSize: "15px", fontWeight: "500" }}>
           <a href="#servizi">Servizi</a>
           <a href="#siti-web">Siti web</a>
+          <a href="#esempi">Esempi</a>
           <a href="#pacchetti">Pacchetti</a>
-          <a href="#portfolio">Portfolio</a>
           <a href="#faq">FAQ</a>
         </nav>
         <a className="vs-btn vs-head-cta" href="#pacchetti" style={{ display: "inline-flex", alignItems: "center", gap: "10px", minHeight: "46px", padding: "0 22px", borderRadius: "999px", border: "1px solid rgba(212,174,106,0.55)", color: "#F3ECDD", textDecoration: "none", fontSize: "14.5px", fontWeight: "600" }}>Scegli il tuo pacchetto</a>
@@ -31,7 +31,7 @@ export default function Hero() {
         <div className="vs-rise" style={{ flex: "1 1 520px", minWidth: "0" }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "8px 16px", borderRadius: "999px", background: "rgba(243,236,221,0.06)", border: "1px solid rgba(243,236,221,0.14)", fontSize: "13px", fontWeight: "600", letterSpacing: "0.08em", textTransform: "uppercase", color: "#E6DECB" }}>
             <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#E0793A" }} />
-            Social media · Siti web · Italia
+            Social media · Siti web · Modena e Bologna
           </div>
           <h1 className="vs-h1" style={{ margin: "28px 0 0", fontFamily: "var(--font-fraunces), Georgia, serif", fontWeight: "400", fontSize: "clamp(46px, 6vw, 82px)", lineHeight: "1.02", letterSpacing: "-0.02em", textWrap: "balance" }}>
             Il tuo negozio merita una{" "}
@@ -46,8 +46,9 @@ export default function Hero() {
                 <path d="M5 12h14M13 6l6 6-6 6" />
               </svg>
             </a>
-            <a href="#come-funziona" style={{ display: "inline-flex", alignItems: "center", minHeight: "44px", color: "#F3ECDD", fontSize: "16px", fontWeight: "600", textUnderlineOffset: "6px" }}>Come funziona</a>
+            <a href="#esempi" style={{ display: "inline-flex", alignItems: "center", minHeight: "44px", color: "#F3ECDD", fontSize: "16px", fontWeight: "600", textUnderlineOffset: "6px" }}>Guarda gli esempi</a>
           </div>
+          <p className="vs-note" style={{ margin: "16px 0 0", fontSize: "14.5px", fontWeight: "500", letterSpacing: "0.02em", color: "#A39C88" }}>Senza vincoli · Nessuna riunione · Disdici quando vuoi</p>
           <div className="vs-trust" style={{ marginTop: "52px", paddingTop: "28px", borderTop: "1px solid rgba(243,236,221,0.12)", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(160px, 100%), 1fr))", gap: "20px" }}>
             <div style={{ display: "flex", gap: "10px", alignItems: "flex-start", fontSize: "14.5px", lineHeight: "1.45", color: "#E6DECB" }}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AE6A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ flex: "none", marginTop: "1px" }}>

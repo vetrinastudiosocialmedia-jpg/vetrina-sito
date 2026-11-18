@@ -1,6 +1,6 @@
 import LegalLayout from "@/components/LegalLayout";
 
-export const metadata = { title: "Termini di servizio – Vetrina Studio" };
+export const metadata = { title: "Termini di servizio – Vetrina Studio", description: "Condizioni dei piani social e dei siti web di Vetrina Studio: pagamento mensile anticipato, calendario entro il 25, modifiche e disdetta senza vincoli.", alternates: { canonical: "https://vetrinastudiosocial.it/termini/" } };
 
 export default function Page() {
   return (

@@ -1,6 +1,7 @@
 "use client";
 
 import { hasPaypal, hasStripe, paypalLink, stripeLink } from "@/lib/site";
+import { ev } from "@/lib/track";
 
 // Pulsante di un piano.
 // - Con Stripe: porta al checkout nella stessa scheda; dopo il pagamento
@@ -11,7 +12,7 @@ import { hasPaypal, hasStripe, paypalLink, stripeLink } from "@/lib/site";
 export default function PlanButton({ plan, className, style, children }) {
   if (hasStripe(plan)) {
     return (
-      <a href={stripeLink(plan)} className={className} style={style}>
+      <a href={stripeLink(plan)} className={className} style={style} {...ev("Scelta piano", { piano: plan })}>
         {children}
       </a>
     );
@@ -30,6 +31,7 @@ export default function PlanButton({ plan, className, style, children }) {
       target="_blank"
       rel="noopener"
       onClick={handleClick}
+      {...ev("Scelta piano", { piano: plan })}
       className={className}
       style={style}
     >

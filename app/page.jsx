@@ -4,11 +4,28 @@ import Problema from "@/components/Problema";
 import ComeFunziona from "@/components/ComeFunziona";
 import Pacchetti from "@/components/Pacchetti";
 import SitiWeb from "@/components/SitiWeb";
-import Portfolio from "@/components/Portfolio";
+import Esempi from "@/components/Esempi";
+import Tracking from "@/components/Tracking";
 import Faq from "@/components/Faq";
+import Zone from "@/components/Zone";
 import Contatti from "@/components/Contatti";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
+import { jsonLd } from "@/lib/schema";
+
+// Indirizzo ufficiale della home (evita duplicati per Google)
+export const metadata = {
+  alternates: { canonical: "https://vetrinastudiosocial.it/" },
+  openGraph: {
+    title: "Vetrina Studio – Agenzia Social Media a Modena e Bologna",
+    description: "Contenuti social pronti da pubblicare da €49 al mese, senza vincoli, e siti web su misura per attività locali.",
+    url: "https://vetrinastudiosocial.it/",
+    siteName: "Vetrina Studio",
+    type: "website",
+    locale: "it_IT",
+    images: ["/img/site-desktop.jpg"],
+  },
+};
 
 // La home page: l'ordine delle sezioni è quello in cui compaiono nel sito
 export default function Home() {
@@ -26,13 +43,17 @@ export default function Home() {
       <Servizi />
       <Problema />
       <ComeFunziona />
+      <Esempi />
       <Pacchetti />
       <SitiWeb />
-      <Portfolio />
       <Faq />
+      <Zone />
       <Contatti />
       <Footer />
       <WhatsAppFloat />
+      <Tracking />
+      {/* Dati strutturati per Google e per gli assistenti IA: chi siamo, servizi, prezzi, zone e FAQ (lib/schema.js) */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
     </div>
   );
 }

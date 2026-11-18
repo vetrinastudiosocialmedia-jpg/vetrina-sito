@@ -1,5 +1,6 @@
 import { Fraunces, Manrope } from "next/font/google";
 import "./globals.css";
+import { UMAMI_ID } from "@/lib/track";
 
 // I caratteri vengono scaricati durante la build e serviti dal sito stesso
 // (nessuna richiesta ai server di Google da parte dei visitatori).
@@ -17,17 +18,20 @@ const manrope = Manrope({
 
 export const metadata = {
   metadataBase: new URL("https://vetrinastudiosocial.it"),
-  title: "Vetrina Studio – Agenzia Social Media e Siti Web",
+  title: "Agenzia Social Media a Modena e Bologna | Vetrina Studio",
   description:
-    "Post, caroselli, Reels e siti web per la tua attività. Vetrina Studio, agenzia social media in Italia.",
+    "Post, Reels e calendario pronti ogni mese per bar, ristoranti e negozi tra Modena e Bologna. Piani da €49 al mese, senza vincoli, tutto online.",
   openGraph: {
-    title: "Vetrina Studio – Agenzia Social Media",
+    title: "Vetrina Studio – Agenzia Social Media a Modena e Bologna",
     description:
-      "Il tuo negozio merita una vetrina anche online. Contenuti social pronti da pubblicare e siti web su misura.",
+      "Contenuti social pronti da pubblicare da €49 al mese, senza vincoli, e siti web su misura per attività locali.",
+    siteName: "Vetrina Studio",
     type: "website",
     locale: "it_IT",
     images: ["/img/site-desktop.jpg"],
   },
+  robots: { index: true, follow: true, "max-image-preview": "large" },
+  twitter: { card: "summary_large_image" },
   icons: { icon: "/img/favicon.png", apple: "/img/favicon.png" },
 };
 
@@ -36,6 +40,11 @@ export const viewport = { themeColor: "#1C2316" };
 export default function RootLayout({ children }) {
   return (
     <html lang="it" className={`${fraunces.variable} ${manrope.variable}`}>
+      <head>
+        {UMAMI_ID ? (
+          <script defer src="https://cloud.umami.is/script.js" data-website-id={UMAMI_ID} data-domains="vetrinastudiosocial.it" />
+        ) : null}
+      </head>
       <body>{children}</body>
     </html>
   );

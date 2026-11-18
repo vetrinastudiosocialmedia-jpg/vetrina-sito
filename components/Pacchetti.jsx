@@ -1,5 +1,6 @@
 import { waLink } from "@/lib/site";
 import PlanButton from "@/components/PlanButton";
+import { ev } from "@/lib/track";
 
 // Piani Essenziale, Crescita e Pro con i prezzi
 export default function Pacchetti() {
@@ -166,7 +167,7 @@ export default function Pacchetti() {
           </span>
           <span>
             Hai domande prima di attivare?{" "}
-            <a href={waLink("Ciao! Ho una domanda sui piani di Vetrina Studio.")} style={{ color: "#D4AE6A", fontWeight: "600" }}>Scrivici su WhatsApp</a>
+            <a href={waLink("Ciao! Ho una domanda sui piani di Vetrina Studio.")} {...ev("WhatsApp", { origine: "pacchetti" })} style={{ color: "#D4AE6A", fontWeight: "600" }}>Scrivici su WhatsApp</a>
           </span>
         </div>
       </div>

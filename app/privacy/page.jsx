@@ -1,6 +1,7 @@
 import LegalLayout from "@/components/LegalLayout";
+import { UMAMI_ID } from "@/lib/track";
 
-export const metadata = { title: "Privacy policy – Vetrina Studio" };
+export const metadata = { title: "Privacy policy – Vetrina Studio", description: "Come Vetrina Studio tratta i dati personali di chi visita il sito vetrinastudiosocial.it o ci scrive via email e WhatsApp, secondo il GDPR.", alternates: { canonical: "https://vetrinastudiosocial.it/privacy/" } };
 
 export default function Page() {
   return (
@@ -75,6 +76,7 @@ export default function Page() {
           <strong>WhatsApp (Meta)</strong>
           {" "}– se scegli di scriverci su WhatsApp;
         </li>
+        {UMAMI_ID ? <li><strong>Umami Software, Inc.</strong> – statistiche anonime delle visite, senza cookie e senza dati che ti identificano;</li> : null}
         <li><strong>Stripe Payments Europe, Ltd.</strong> – pagina di pagamento, gestione dei pagamenti e degli abbonamenti, solo per i clienti;</li>
         <li><strong>PayPal (Europe) S.à r.l. et Cie, S.C.A.</strong> e <strong>Satispay Europe S.A.</strong> – solo se scegli di pagare con questi metodi;</li>
         <li>eventuali consulenti fiscali, solo per i clienti e solo per quanto necessario.</li>

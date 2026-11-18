@@ -16,18 +16,28 @@ Feito em **Next.js** (exportação estática) e hospedado no **GitHub Pages**. A
 | Planos e preços | `components/Pacchetti.jsx` |
 | Sito Vetrina | `components/SitiWeb.jsx` |
 | Portfólio | `components/Portfolio.jsx` |
-| Perguntas frequentes | `components/Faq.jsx` |
+| Perguntas frequentes (textos) | `lib/faq.js` (o visual fica em `components/Faq.jsx`) |
+| Cidades atendidas (seção "Dove lavoriamo", rodapé e dados para o Google) | `lib/site.js` → `CITTA` |
+| Partita IVA no rodapé | `lib/site.js` → `piva` |
 | Contato | `components/Contatti.jsx` |
 | Rodapé | `components/Footer.jsx` |
 | Botão flutuante do WhatsApp | `components/WhatsAppFloat.jsx` |
 | Página de boas-vindas com questionário (depois do pagamento) | `components/Benvenuto.jsx` (endereço: /benvenuto/) |
 | Links de pagamento Stripe e planos do PayPal | **não ficam no código**: veja "Variáveis de ambiente" |
+| Página "Chi siamo e come lavoriamo" (/chi-siamo/) | `app/chi-siamo/page.jsx` |
 | Privacy, Cookie, Termini | `app/privacy/page.jsx`, `app/cookie/page.jsx`, `app/termini/page.jsx` |
 | Título e descrição para o Google | `app/layout.jsx` |
+| Dados estruturados (empresa, preços, cidades, FAQ) | `lib/schema.js` |
+| Regras para robôs e IAs, mapa do site, resumo para IAs | `public/robots.txt`, `public/sitemap.xml`, `public/llms.txt` |
+| Chave do IndexNow (não apagar) | `public/07a02288f04a45397183e5adb7bdf204.txt` |
 | Estilos gerais e versão para celular | `app/globals.css` |
 | Imagens e logo | `public/img/` |
 
 A ordem das seções está em `app/page.jsx`.
+
+## SEO e IAs
+
+As regras estão em `docs/seo-content-spec.md`. Depois de cada publicação, a aba **Actions** mostra no passo `npm run build` a linha "Verifica SEO: N di N pagine approvate" e o que corrigir. Quando entrar uma página nova, ela precisa ir também para `public/sitemap.xml` e `public/llms.txt`.
 
 ## Atualizar o site pelo navegador
 
