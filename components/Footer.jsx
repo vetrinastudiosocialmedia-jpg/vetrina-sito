@@ -22,7 +22,7 @@ export default function Footer() {
           <ul style={lista}>
             <li><a href="/#pacchetti" style={link}>Piani social da €49/mese</a></li>
             <li><a href="/#pacchetti" style={link}>Reels e Stories</a></li>
-            <li><a href="/#siti-web" style={link}>Sito Vetrina da €149</a></li>
+            <li><a href="/#siti-web" style={link}>Sito Vetrina da €290</a></li>
             <li><a href="/#faq" style={link}>Domande frequenti</a></li>
           </ul>
         </nav>

@@ -16,10 +16,12 @@ export default function SitiWeb() {
           </h2>
           <p style={{ margin: "20px 0 0", maxWidth: "480px", fontSize: "17px", lineHeight: "1.65", color: "#E6D6C4" }}>Il sito della tua attività, chiaro e veloce, pensato per farti contattare.</p>
           <div style={{ marginTop: "28px", display: "flex", flexWrap: "wrap", alignItems: "baseline", gap: "4px 12px" }}>
-            <span style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: "52px", lineHeight: "1", color: "#F3ECDD" }}>€149</span>
+            <span style={{ fontSize: "15px", color: "#E6D6C4" }}>a partire da</span>
+            <span style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: "52px", lineHeight: "1", color: "#F3ECDD" }}>€290</span>
             <span style={{ fontSize: "15px", color: "#E6D6C4" }}>una tantum</span>
-            <s style={{ fontSize: "16px", color: "#C4A994" }}>€249</s>
+            <s style={{ fontSize: "16px", color: "#C4A994" }}>€490</s>
           </div>
+          <p style={{ margin: "10px 0 0", fontSize: "14.5px", lineHeight: "1.55", color: "#E6D6C4" }}>Il prezzo è per la pagina unica. Per un sito con più pagine o funzioni in più ti facciamo un preventivo su misura.</p>
           <ul style={{ listStyle: "none", margin: "26px 0 0", padding: "0", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(210px, 100%), 1fr))", gap: "12px 20px", fontSize: "15.5px", lineHeight: "1.45", color: "#F3ECDD" }}>
             <li style={{ display: "flex", gap: "12px" }}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E0793A" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ flex: "none", marginTop: "2px" }}>
