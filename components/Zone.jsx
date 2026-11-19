@@ -8,15 +8,15 @@ export default function Zone() {
         <div style={{ flex: "1 1 340px", minWidth: "0" }}>
           <div style={{ fontSize: "13px", fontWeight: "700", letterSpacing: "0.16em", textTransform: "uppercase", color: "#D4AE6A" }}>Dove lavoriamo</div>
           <h2 style={{ margin: "18px 0 0", fontFamily: "var(--font-fraunces), Georgia, serif", fontWeight: "400", fontSize: "clamp(34px, 4vw, 54px)", lineHeight: "1.08", letterSpacing: "-0.015em", textWrap: "balance" }}>
-            Agenzia social media tra{" "}
-            <em style={{ fontStyle: "italic", color: "#D4AE6A" }}>Modena e Bologna</em>.
+            Online, in{" "}
+            <em style={{ fontStyle: "italic", color: "#D4AE6A" }}>tutta Italia</em>.
           </h2>
         </div>
         <div style={{ flex: "2 1 560px", minWidth: "0" }}>
           <p style={{ margin: "0", maxWidth: "640px", fontSize: "17px", lineHeight: "1.7", color: "#CFC8B4" }}>
-            Curiamo i social di bar, ristoranti, gelaterie, centri estetici e negozi delle province di Modena e Bologna. Lavoriamo tutto online, quindi seguiamo anche attività nel resto d'Italia: i piani partono da €49 al mese, senza vincoli.
+            Curiamo i social di bar, ristoranti, gelaterie, centri estetici e negozi in tutta Italia: lavoriamo tutto online, per iscritto, senza riunioni. La nostra base è tra Modena e Bologna, dove seguiamo volentieri le attività della zona. I piani partono da €49 al mese, senza vincoli.
           </p>
-          <ul aria-label="Comuni in cui lavoriamo" style={{ margin: "32px 0 0", padding: "0", listStyle: "none", display: "flex", flexWrap: "wrap", gap: "10px" }}>
+          <ul aria-label="La nostra zona: comuni tra Modena e Bologna" style={{ margin: "32px 0 0", padding: "0", listStyle: "none", display: "flex", flexWrap: "wrap", gap: "10px" }}>
             {CITTA.map((c) => (
               <li key={c} style={{ padding: "8px 16px", borderRadius: "999px", border: "1px solid rgba(212,174,106,0.4)", fontSize: "14.5px", fontWeight: "600", color: "#E6DECB" }}>{c}</li>
             ))}

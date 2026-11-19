@@ -18,11 +18,11 @@ const manrope = Manrope({
 
 export const metadata = {
   metadataBase: new URL("https://vetrinastudiosocial.it"),
-  title: "Agenzia Social Media a Modena e Bologna | Vetrina Studio",
+  title: "Agenzia Social Media online in tutta Italia | Vetrina Studio",
   description:
-    "Post, Reels e calendario pronti ogni mese per bar, ristoranti e negozi tra Modena e Bologna. Piani da €49 al mese, senza vincoli, tutto online.",
+    "Post, Reels e calendario pronti ogni mese per bar, ristoranti e negozi in tutta Italia. Piani da €49 al mese, senza vincoli, tutto online.",
   openGraph: {
-    title: "Vetrina Studio – Agenzia Social Media a Modena e Bologna",
+    title: "Vetrina Studio – Agenzia Social Media online in tutta Italia",
     description:
       "Contenuti social pronti da pubblicare da €49 al mese, senza vincoli, e siti web su misura per attività locali.",
     siteName: "Vetrina Studio",

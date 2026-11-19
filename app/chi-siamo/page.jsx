@@ -9,7 +9,7 @@ export const metadata = {
   alternates: { canonical: "https://vetrinastudiosocial.it/chi-siamo/" },
 };
 
-const AGGIORNATO = "2026-11-18";
+const AGGIORNATO = "2026-11-19";
 
 const datiStrutturati = {
   "@context": "https://schema.org",
@@ -38,10 +38,10 @@ const datiStrutturati = {
 // Pagina "Chi siamo e contenuti": chi è il responsabile, come nascono i contenuti, correzioni
 export default function Page() {
   return (
-    <LegalLayout title="Chi siamo e come lavoriamo" updated="18 novembre 2026">
+    <LegalLayout title="Chi siamo e come lavoriamo" updated="19 novembre 2026">
       <div className="box">
         <p>
-          Vetrina Studio è un'agenzia social media e siti web per attività locali, tra Modena e Bologna. Prepariamo ogni mese post, caroselli, Reels e Stories pronti da pubblicare, e realizziamo siti a pagina unica per bar, ristoranti, gelaterie, centri estetici e negozi. Lavoriamo tutto online, per iscritto, senza riunioni.
+          Vetrina Studio è un'agenzia social media e siti web per attività locali in tutta Italia, con base tra Modena e Bologna. Prepariamo ogni mese post, caroselli, Reels e Stories pronti da pubblicare, e realizziamo siti a pagina unica per bar, ristoranti, gelaterie, centri estetici e negozi. Lavoriamo tutto online, per iscritto, senza riunioni.
         </p>
       </div>
 
@@ -50,7 +50,7 @@ export default function Page() {
         Vetrina Studio è il nome commerciale con cui lavora {SITE.titolare}, titolare dell'attività, dal 2026. Siamo una realtà piccola e lo diciamo con orgoglio: ogni cliente ha un referente unico, raggiungibile su WhatsApp o via email.
       </p>
       <p>
-        Lavoriamo soprattutto con attività delle province di Modena e Bologna ({CITTA.slice(0, 8).join(", ")} e dintorni) e seguiamo volentieri anche attività nel resto d'Italia.
+        Lavoriamo online con attività di tutta Italia. La nostra base è tra Modena e Bologna, dove seguiamo volentieri le attività della zona ({CITTA.slice(0, 8).join(", ")} e dintorni).
       </p>
 
       <h2 id="contenuti">Come nascono i contenuti</h2>

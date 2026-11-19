@@ -14,7 +14,7 @@ export default function Footer() {
             <img src="/img/logo-icona.png" alt="" style={{ display: "block", height: "28px", width: "auto" }} />
             <span style={{ color: "#E6DECB", fontWeight: "600" }}>Vetrina Studio</span>
           </div>
-          <p style={{ margin: "14px 0 0" }}>Agenzia social media e siti web per attività locali, tra Modena e Bologna. Tutto online.</p>
+          <p style={{ margin: "14px 0 0" }}>Agenzia social media e siti web per attività locali in tutta Italia. Tutto online, con base tra Modena e Bologna.</p>
           <p style={{ margin: "10px 0 0" }}><a href="/chi-siamo/" style={link}>Chi siamo e come lavoriamo</a></p>
         </div>
         <nav aria-label="Servizi">
@@ -28,7 +28,7 @@ export default function Footer() {
         </nav>
         <div>
           <h2 style={titolo}>Dove lavoriamo</h2>
-          <p style={{ margin: "0" }}>{CITTA.join(" · ")} e tutta Italia online.</p>
+          <p style={{ margin: "0" }}>Tutta Italia, online. La nostra base: {CITTA.join(" · ")}.</p>
         </div>
         <div>
           <h2 style={titolo}>Contatti</h2>
@@ -42,8 +42,7 @@ export default function Footer() {
       <div style={{ maxWidth: "1240px", margin: "48px auto 0", paddingTop: "24px", borderTop: "1px solid rgba(243,236,221,0.08)", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "16px 40px" }}>
         <span>
           © 2026 Vetrina Studio di {SITE.titolare}
-          {SITE.piva ? ` · P.IVA ${SITE.piva}` : ""}
-          {" · "}Immagini del portfolio: progetti dimostrativi generati con IA
+          {SITE.piva ? ` · P.IVA ${SITE.piva}` : SITE.codiceFiscale ? ` · C.F. ${SITE.codiceFiscale}` : ""}
         </span>
         <nav aria-label="Note legali" style={{ display: "flex", flexWrap: "wrap", gap: "24px" }}>
           <a href="/chi-siamo/" style={link}>Chi siamo e contenuti</a>

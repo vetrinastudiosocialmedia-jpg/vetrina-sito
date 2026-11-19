@@ -31,7 +31,7 @@ export default function Hero() {
         <div className="vs-rise" style={{ flex: "1 1 520px", minWidth: "0" }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "8px 16px", borderRadius: "999px", background: "rgba(243,236,221,0.06)", border: "1px solid rgba(243,236,221,0.14)", fontSize: "13px", fontWeight: "600", letterSpacing: "0.08em", textTransform: "uppercase", color: "#E6DECB" }}>
             <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#E0793A" }} />
-            Social media · Siti web · Modena e Bologna
+            Social media · Siti web · Tutta Italia
           </div>
           <h1 className="vs-h1" style={{ margin: "28px 0 0", fontFamily: "var(--font-fraunces), Georgia, serif", fontWeight: "400", fontSize: "clamp(46px, 6vw, 82px)", lineHeight: "1.02", letterSpacing: "-0.02em", textWrap: "balance" }}>
             Il tuo negozio merita una{" "}

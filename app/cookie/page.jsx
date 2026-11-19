@@ -1,11 +1,12 @@
 import LegalLayout from "@/components/LegalLayout";
+import { SITE, datiFiscali } from "@/lib/site";
 import { UMAMI_ID } from "@/lib/track";
 
 export const metadata = { title: "Cookie policy – Vetrina Studio", description: "Quali cookie usa il sito vetrinastudiosocial.it di Vetrina Studio: nessun cookie di profilazione o di statistica, solo eventuali cookie tecnici.", alternates: { canonical: "https://vetrinastudiosocial.it/cookie/" } };
 
 export default function Page() {
   return (
-    <LegalLayout title="Cookie policy" updated="17 novembre 2026">
+    <LegalLayout title="Cookie policy" updated="19 novembre 2026">
       <div className="box">
         <p>
           In breve:{" "}
@@ -38,7 +39,7 @@ export default function Page() {
       <p>Puoi bloccare o cancellare i cookie dalle impostazioni del tuo browser. Bloccare i cookie tecnici potrebbe impedire il corretto funzionamento di alcune parti del sito.</p>
       <h2>5. Titolare e contatti</h2>
       <p>
-        Il titolare del trattamento è Leidiane Paula Lopes, che opera con il nome commerciale “Vetrina Studio”. Per domande scrivi a{" "}
+        Il titolare del trattamento è {SITE.titolare}{datiFiscali(SITE)}, che opera con il nome commerciale “Vetrina Studio”. Per domande scrivi a{" "}
         <a href="mailto:vetrina.studio.socialmedia@gmail.com">vetrina.studio.socialmedia@gmail.com</a>
         . Maggiori informazioni nella{" "}
         <a href="/privacy/">Privacy policy</a>

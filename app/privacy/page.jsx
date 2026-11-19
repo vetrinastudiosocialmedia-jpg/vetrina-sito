@@ -1,11 +1,12 @@
 import LegalLayout from "@/components/LegalLayout";
+import { SITE, datiFiscali } from "@/lib/site";
 import { UMAMI_ID } from "@/lib/track";
 
 export const metadata = { title: "Privacy policy – Vetrina Studio", description: "Come Vetrina Studio tratta i dati personali di chi visita il sito vetrinastudiosocial.it o ci scrive via email e WhatsApp, secondo il GDPR.", alternates: { canonical: "https://vetrinastudiosocial.it/privacy/" } };
 
 export default function Page() {
   return (
-    <LegalLayout title="Privacy policy" updated="17 novembre 2026">
+    <LegalLayout title="Privacy policy" updated="19 novembre 2026">
       <div className="box">
         <p>
           Questa informativa spiega come trattiamo i dati personali di chi visita il sito{" "}
@@ -15,7 +16,7 @@ export default function Page() {
       </div>
       <h2>1. Titolare del trattamento</h2>
       <p>
-        Il titolare del trattamento è Leidiane Paula Lopes, che opera con il nome commerciale “Vetrina Studio”. Per qualsiasi domanda sui tuoi dati puoi scrivere a{" "}
+        Il titolare del trattamento è {SITE.titolare}{datiFiscali(SITE)}, che opera con il nome commerciale “Vetrina Studio”. Per qualsiasi domanda sui tuoi dati puoi scrivere a{" "}
         <a href="mailto:vetrina.studio.socialmedia@gmail.com">vetrina.studio.socialmedia@gmail.com</a>
         .
       </p>

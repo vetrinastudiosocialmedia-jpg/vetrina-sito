@@ -1,13 +1,14 @@
 import LegalLayout from "@/components/LegalLayout";
+import { SITE, datiFiscali } from "@/lib/site";
 
 export const metadata = { title: "Termini di servizio – Vetrina Studio", description: "Condizioni dei piani social e dei siti web di Vetrina Studio: pagamento mensile anticipato, calendario entro il 25, modifiche e disdetta senza vincoli.", alternates: { canonical: "https://vetrinastudiosocial.it/termini/" } };
 
 export default function Page() {
   return (
-    <LegalLayout title="Termini di servizio" updated="17 novembre 2026">
+    <LegalLayout title="Termini di servizio" updated="19 novembre 2026">
       <div className="box">
         <p>
-          Questi termini regolano i servizi offerti da Leidiane Paula Lopes, che opera con il nome commerciale “Vetrina Studio” (di seguito “Vetrina Studio” o “noi”) attraverso il sito{" "}
+          Questi termini regolano i servizi offerti da {SITE.titolare}{datiFiscali(SITE)}, che opera con il nome commerciale “Vetrina Studio” (di seguito “Vetrina Studio” o “noi”) attraverso il sito{" "}
           <strong>vetrinastudiosocial.it</strong>
           . I servizi sono rivolti ad attività commerciali, imprese e professionisti. Attivando un piano o acquistando un servizio accetti questi termini.
         </p>
@@ -80,7 +81,7 @@ export default function Page() {
       <p>Questi termini sono regolati dalla legge italiana.</p>
       <h2>16. Contatti</h2>
       <p>
-        Leidiane Paula Lopes, che opera con il nome commerciale “Vetrina Studio”
+        {SITE.titolare}{datiFiscali(SITE)}, che opera con il nome commerciale “Vetrina Studio”
         <br />
         Email:{" "}
         <a href="mailto:vetrina.studio.socialmedia@gmail.com">vetrina.studio.socialmedia@gmail.com</a>

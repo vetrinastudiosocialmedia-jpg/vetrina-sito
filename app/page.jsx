@@ -17,7 +17,7 @@ import { jsonLd } from "@/lib/schema";
 export const metadata = {
   alternates: { canonical: "https://vetrinastudiosocial.it/" },
   openGraph: {
-    title: "Vetrina Studio – Agenzia Social Media a Modena e Bologna",
+    title: "Vetrina Studio – Agenzia Social Media online in tutta Italia",
     description: "Contenuti social pronti da pubblicare da €49 al mese, senza vincoli, e siti web su misura per attività locali.",
     url: "https://vetrinastudiosocial.it/",
     siteName: "Vetrina Studio",
