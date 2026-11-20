@@ -4,11 +4,11 @@ import { useEffect, useState } from "react";
 import { SITE, waLink } from "@/lib/site";
 import { track } from "@/lib/track";
 
-// Modulo di benvenuto: il cliente racconta la sua attività dopo aver attivato il piano.
+// Modulo di benvenuto: dopo il pagamento il cliente lascia solo i dati di base e il WhatsApp.
+// Il resto (logo, foto, cosa comunicare, consegna) si raccoglie poi su WhatsApp.
 // Le risposte vengono inviate su WhatsApp (o via email) come messaggio già scritto.
 
 const PIANI = { essenziale: "Essenziale", crescita: "Crescita", pro: "Pro" };
-const STILI = ["Elegante", "Moderno", "Colorato", "Minimal", "Rustico / tradizionale", "Giovane e divertente"];
 
 const C = {
   bg: "#F3ECDD",
@@ -57,14 +57,8 @@ export default function Benvenuto() {
     settore: "",
     citta: "",
     instagram: "",
+    whatsapp: "",
     email: "",
-    offerta: "",
-    clienti: "",
-    stili: [],
-    colori: "",
-    comunicare: "",
-    orari: "",
-    evitare: "",
   });
   const [inviato, setInviato] = useState(false);
   const [pagato, setPagato] = useState(false);
@@ -90,8 +84,6 @@ export default function Benvenuto() {
   }, [inviato]);
 
   const set = (k) => (e) => setF({ ...f, [k]: e.target.value });
-  const toggleStile = (s) =>
-    setF({ ...f, stili: f.stili.includes(s) ? f.stili.filter((x) => x !== s) : [...f.stili, s] });
 
   const righe = [
     "Ciao Vetrina Studio! Ecco il modulo di benvenuto.",
@@ -102,20 +94,13 @@ export default function Benvenuto() {
     `Settore: ${f.settore || "-"}`,
     `Città: ${f.citta || "-"}`,
     `Instagram: ${f.instagram || "-"}`,
+    `WhatsApp: ${f.whatsapp}`,
     `Email usata per il pagamento: ${f.email || "-"}`,
     "",
-    `Cosa offriamo: ${f.offerta || "-"}`,
-    `Clienti ideali: ${f.clienti || "-"}`,
-    `Stile preferito: ${f.stili.length ? f.stili.join(", ") : "-"}`,
-    `Colori del brand: ${f.colori || "-"}`,
-    `Cosa vogliamo comunicare: ${f.comunicare || "-"}`,
-    `Giorni e orari: ${f.orari || "-"}`,
-    `Da evitare: ${f.evitare || "-"}`,
-    "",
-    "Vi mando qui sotto il logo e le foto.",
+    "Aspetto il vostro messaggio per i dettagli e la consegna.",
   ];
   const testo = righe.join("\n");
-  const pronto = f.nome.trim() && f.attivita.trim();
+  const pronto = f.nome.trim() && f.attivita.trim() && f.whatsapp.trim();
 
   function invia(e) {
     e.preventDefault();
@@ -127,7 +112,7 @@ export default function Benvenuto() {
 
   const mailto = `mailto:${SITE.email}?subject=${encodeURIComponent(
     `Modulo di benvenuto – ${f.attivita || "nuovo cliente"}`
-  )}&body=${encodeURIComponent(testo.replace("Vi mando qui sotto il logo e le foto.", "Allego il logo e le foto."))}`;
+  )}&body=${encodeURIComponent(testo)}`;
 
   return (
     <div style={{ minHeight: "100vh", background: C.bg, color: C.ink, fontFamily: sans }}>
@@ -151,15 +136,15 @@ export default function Benvenuto() {
         </h1>
         <p style={{ margin: "16px 0 0", fontSize: "17px", lineHeight: 1.65, color: C.soft, maxWidth: "640px" }}>
           {pagato
-            ? "Pagamento ricevuto, grazie! Ora compila questo modulo: ci serve per preparare i tuoi contenuti."
-            : "Se hai appena scelto un piano, completa prima il pagamento. Poi compila questo modulo: ci serve per preparare i tuoi contenuti."}
+            ? "Pagamento ricevuto, grazie! Lasciaci i tuoi dati: ci vuole un minuto."
+            : "Se hai appena scelto un piano, completa prima il pagamento. Poi lasciaci i tuoi dati: ci vuole un minuto."}
         </p>
 
         <ol style={{ listStyle: "none", margin: "32px 0 0", padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(220px, 100%), 1fr))", gap: "12px" }}>
           {[
             ["1", pagato ? "Pagamento fatto ✓" : "Pagamento", pagato ? "Ricevuto, grazie!" : "Con carta, PayPal o Satispay."],
-            ["2", "Questo modulo", "Circa 5 minuti."],
-            ["3", "Logo e foto", "Su WhatsApp, dopo l'invio."],
+            ["2", "Questo modulo", "Un minuto."],
+            ["3", "Ti scriviamo su WhatsApp", "Per i dettagli e la consegna."],
           ].map(([n, t, d]) => (
             <li key={n} style={{ display: "flex", gap: "14px", alignItems: "flex-start", padding: "16px 18px", borderRadius: "18px", background: C.card, border: `1px solid ${C.line}` }}>
               <span style={{ fontFamily: serif, fontSize: "30px", lineHeight: 1, color: "#B5603E" }}>{n}</span>
@@ -174,13 +159,13 @@ export default function Benvenuto() {
         {inviato ? (
           <section id="grazie" style={{ scrollMarginTop: "24px", marginTop: "36px", padding: "32px", borderRadius: "26px", background: C.dark, color: "#F3ECDD" }}>
             <h2 style={{ margin: 0, fontFamily: serif, fontWeight: 400, fontSize: "32px" }}>
-              Grazie! Ultimo passo.
+              Grazie! Ci sentiamo su WhatsApp.
             </h2>
             <p style={{ margin: "14px 0 0", fontSize: "16.5px", lineHeight: 1.65, color: "#D9D2BE" }}>
-              Si è aperto WhatsApp con il modulo già scritto: invialo e, nella stessa chat, mandaci il <strong style={{ color: "#F3ECDD" }}>logo</strong> e almeno <strong style={{ color: "#F3ECDD" }}>10 foto</strong> della tua attività (vanno bene anche fatte col telefono).
+              Si è aperto WhatsApp con i tuoi dati già scritti: <strong style={{ color: "#F3ECDD" }}>invia il messaggio</strong>, così abbiamo subito il tuo contatto.
             </p>
             <p style={{ margin: "14px 0 0", fontSize: "16.5px", lineHeight: 1.65, color: "#D9D2BE" }}>
-              Entro il 25 del mese riceverai il calendario dei contenuti da approvare.
+              Ti scriviamo entro 24 ore lavorative per raccogliere le altre informazioni (logo, foto, cosa vuoi comunicare) e per concordare la consegna.
             </p>
             <div style={{ marginTop: "22px", display: "flex", flexWrap: "wrap", gap: "12px" }}>
               <a href={waLink(testo)} target="_blank" rel="noopener" style={{ display: "inline-flex", alignItems: "center", minHeight: "50px", padding: "0 22px", borderRadius: "999px", background: C.accent, color: C.ink, fontWeight: 800, textDecoration: "none" }}>
@@ -194,6 +179,14 @@ export default function Benvenuto() {
         ) : null}
 
         <form onSubmit={invia} style={{ marginTop: "36px", padding: "32px", borderRadius: "26px", background: C.card, border: `1px solid ${C.line}`, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(260px, 100%), 1fr))", gap: "20px" }}>
+          <div role="note" style={{ gridColumn: "1 / -1", display: "flex", gap: "14px", alignItems: "flex-start", padding: "16px 18px", borderRadius: "16px", background: "#EAF3E4", border: "1px solid #B9D3AB" }}>
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true" style={{ flex: "none", marginTop: "1px" }}>
+              <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.1-1.5-1.1-2.8s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.3.5-.4.5c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.9-1c.2-.3.4-.2.6-.1l1.9.9c.3.1.5.2.5.3.1.2.1.7-.1 1.4z"/>
+            </svg>
+            <p style={{ margin: 0, fontSize: "15px", lineHeight: 1.6, color: C.ink }}>
+              <strong>Ti contatteremo noi su WhatsApp</strong> entro 24 ore lavorative per raccogliere le altre informazioni (logo, foto, cosa vuoi comunicare) e per concordare la consegna. Qui ci servono solo i dati di base.
+            </p>
+          </div>
           <Field id="b-piano" title="Piano scelto">
             <select id="b-piano" value={f.piano} onChange={set("piano")} style={input}>
               <option value="">Seleziona</option>
@@ -226,63 +219,19 @@ export default function Benvenuto() {
           <Field id="b-ig" title="Instagram dell'attività" help="(se c'è)">
             <input id="b-ig" value={f.instagram} onChange={set("instagram")} placeholder="@tuaattivita" style={input} />
           </Field>
-          <div style={{ gridColumn: "1 / -1" }}>
-            <Field id="b-email" title="Email usata per il pagamento" help="(così colleghiamo il pagamento a te)">
-              <input id="b-email" type="email" value={f.email} onChange={set("email")} style={input} />
-            </Field>
-          </div>
-          <div style={{ gridColumn: "1 / -1" }}>
-            <Field id="b-offerta" title="Cosa vendi o offri?" help="(prodotti, servizi, piatti forti…)">
-              <textarea id="b-offerta" rows={3} value={f.offerta} onChange={set("offerta")} style={{ ...input, resize: "vertical" }} />
-            </Field>
-          </div>
-          <div style={{ gridColumn: "1 / -1" }}>
-            <Field id="b-clienti" title="Chi sono i tuoi clienti ideali?">
-              <textarea id="b-clienti" rows={2} value={f.clienti} onChange={set("clienti")} style={{ ...input, resize: "vertical" }} />
-            </Field>
-          </div>
-          <fieldset style={{ gridColumn: "1 / -1", border: 0, padding: 0, margin: 0 }}>
-            <legend style={{ ...label, marginBottom: "10px" }}>Che stile ti piace?</legend>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: "10px" }}>
-              {STILI.map((s) => {
-                const on = f.stili.includes(s);
-                return (
-                  <button
-                    key={s}
-                    type="button"
-                    aria-pressed={on}
-                    onClick={() => toggleStile(s)}
-                    style={{ minHeight: "44px", padding: "0 16px", borderRadius: "999px", border: `1px solid ${on ? C.ink : C.line}`, background: on ? C.ink : "#FFFFFF", color: on ? "#F3ECDD" : C.ink, fontSize: "14.5px", fontWeight: 600, cursor: "pointer" }}
-                  >
-                    {s}
-                  </button>
-                );
-              })}
-            </div>
-          </fieldset>
-          <Field id="b-colori" title="Colori del brand" help="(se ci sono)">
-            <input id="b-colori" value={f.colori} onChange={set("colori")} placeholder="Es. verde e oro" style={input} />
+          <Field id="b-whatsapp" title="Il tuo WhatsApp">
+            <input id="b-whatsapp" type="tel" required autoComplete="tel" inputMode="tel" value={f.whatsapp} onChange={set("whatsapp")} placeholder="+39 333 123 4567" style={input} />
           </Field>
-          <Field id="b-orari" title="Giorni e orari di apertura">
-            <input id="b-orari" value={f.orari} onChange={set("orari")} style={input} />
+          <Field id="b-email" title="Email usata per il pagamento" help="(facoltativa)">
+            <input id="b-email" type="email" autoComplete="email" value={f.email} onChange={set("email")} style={input} />
           </Field>
-          <div style={{ gridColumn: "1 / -1" }}>
-            <Field id="b-comunicare" title="Cosa vuoi comunicare questo mese?" help="(offerte, novità, eventi…)">
-              <textarea id="b-comunicare" rows={3} value={f.comunicare} onChange={set("comunicare")} style={{ ...input, resize: "vertical" }} />
-            </Field>
-          </div>
-          <div style={{ gridColumn: "1 / -1" }}>
-            <Field id="b-evitare" title="C'è qualcosa da evitare?" help="(facoltativo)">
-              <input id="b-evitare" value={f.evitare} onChange={set("evitare")} style={input} />
-            </Field>
-          </div>
 
           <div style={{ gridColumn: "1 / -1", display: "flex", flexDirection: "column", gap: "12px" }}>
             <button type="submit" disabled={!pronto} style={{ minHeight: "56px", border: 0, borderRadius: "999px", background: pronto ? C.accent : "#D8C9AE", color: C.ink, fontSize: "16px", fontWeight: 800, cursor: pronto ? "pointer" : "not-allowed" }}>
-              Invia su WhatsApp
+              Invia e apri WhatsApp
             </button>
             <p style={{ margin: 0, fontSize: "13.5px", lineHeight: 1.55, color: "#5A5E4C", textAlign: "center" }}>
-              Si apre WhatsApp con il modulo già scritto. Preferisci l&apos;email?{" "}
+              Si apre WhatsApp con i tuoi dati già scritti. Preferisci l&apos;email?{" "}
               <a href={mailto} style={{ color: "#8A4B32", fontWeight: 700 }}>Invia via email</a>. Leggi l&apos;
               <a href="/privacy/" style={{ color: "#8A4B32", fontWeight: 700 }}>informativa sulla privacy</a>.
             </p>
