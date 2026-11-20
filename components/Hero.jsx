@@ -16,7 +16,7 @@ export default function Hero() {
       </svg>
       <header className="vs-header" style={{ position: "relative", zIndex: "5", maxWidth: "1240px", margin: "0 auto", padding: "28px 0", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "20px 32px" }}>
         <a href="#top" aria-label="Vetrina Studio, torna su" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none", color: "#F3ECDD" }}>
-          <img decoding="async" className="vs-logo" src="/img/logo-vetrina.webp" width="400" height="107" alt="Vetrina Studio" style={{ display: "block", height: "62px", width: "auto" }} />
+          <img fetchPriority="high" className="vs-logo" src="/img/logo-vetrina.webp" srcSet="/img/logo-vetrina-240.webp 240w, /img/logo-vetrina.webp 400w" sizes="(max-width: 760px) 172px, 232px" width="400" height="107" alt="Vetrina Studio" style={{ display: "block", height: "62px", width: "auto" }} />
         </a>
         <nav className="vs-nav vs-hide-sm" aria-label="Menu principale" style={{ display: "flex", flexWrap: "wrap", gap: "32px", fontSize: "15px", fontWeight: "500" }}>
           <a href="#servizi">Servizi</a>

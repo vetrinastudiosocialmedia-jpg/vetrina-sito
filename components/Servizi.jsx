@@ -105,7 +105,7 @@ export default function Servizi() {
                   <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#D4AE6A" }} />
                   <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#4F6639" }} />
                 </div>
-                <img loading="lazy" decoding="async" src="/img/site-desktop.webp" width="1200" height="750" alt="" style={{ display: "block", height: "159px", maxWidth: "100%", aspectRatio: "16 / 10", objectFit: "cover", objectPosition: "center top", borderRadius: "8px" }} />
+                <img loading="lazy" decoding="async" src="/img/site-desktop-640.webp" srcSet="/img/site-desktop-640.webp 640w, /img/site-desktop.webp 1200w" sizes="(max-width: 700px) 90vw, 560px" width="1200" height="750" alt="" style={{ display: "block", height: "159px", maxWidth: "100%", aspectRatio: "16 / 10", objectFit: "cover", objectPosition: "center top", borderRadius: "8px" }} />
               </div>
             </div>
             <h3 style={{ margin: "auto 0 0", paddingTop: "24px", fontFamily: "var(--font-fraunces), Georgia, serif", fontWeight: "500", fontSize: "25px", lineHeight: "1.15", color: "#1C2316" }}>Siti e landing page</h3>

@@ -38,6 +38,7 @@ export default function Home() {
         overflow: "hidden",
       }}
     >
+      <main>
       <Hero />
       <Servizi />
       <Problema />
@@ -48,6 +49,7 @@ export default function Home() {
       <Faq />
       <Zone />
       <Contatti />
+      </main>
       <Footer />
       <WhatsAppFloat />
       {/* Dati strutturati per Google e per gli assistenti IA: chi siamo, servizi, prezzi, zone e FAQ (lib/schema.js) */}

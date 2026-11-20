@@ -167,7 +167,7 @@ export default function Pacchetti() {
           </span>
           <span>
             Hai domande prima di attivare?{" "}
-            <a href={waLink("Ciao! Ho una domanda sui piani di Vetrina Studio.")} {...ev("WhatsApp", { origine: "pacchetti" })} style={{ color: "#D4AE6A", fontWeight: "600" }}>Scrivici su WhatsApp</a>
+            <a href={waLink("Ciao! Ho una domanda su Vetrina Studio.")} {...ev("WhatsApp", { origine: "pacchetti" })} style={{ color: "#D4AE6A", fontWeight: "600" }}>Scrivici su WhatsApp</a>
           </span>
         </div>
       </div>
