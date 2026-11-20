@@ -12,15 +12,12 @@ a{color:#D4AE6A}a:hover{color:#EACB8E}
 .vs-nav a{color:#E6DECB;text-decoration:none}
 .vs-nav a:hover{color:#D4AE6A}
 @keyframes vsFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
-@keyframes vsRise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-/* Animazioni solo su schermi grandi e se la persona non ha chiesto meno movimento: su smartphone il testo compare subito */
-@media (min-width:900px) and (prefers-reduced-motion:no-preference){
 .vs-float{animation:vsFloat 6.5s ease-in-out infinite}
 .vs-float2{animation:vsFloat 7.5s ease-in-out infinite;animation-delay:-3.2s}
+@keyframes vsRise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
 .vs-rise{animation:vsRise .9s cubic-bezier(.2,.7,.2,1) both}
 .vs-rise2{animation:vsRise .9s cubic-bezier(.2,.7,.2,1) .15s both}
 .vs-rise3{animation:vsRise .9s cubic-bezier(.2,.7,.2,1) .3s both}
-}
 details summary{list-style:none;cursor:pointer}
 details summary::-webkit-details-marker{display:none}
 details[open] .vs-plus{transform:rotate(45deg)}
