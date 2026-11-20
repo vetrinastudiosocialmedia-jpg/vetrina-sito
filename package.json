@@ -5,11 +5,13 @@
   "description": "Sito di Vetrina Studio – Agenzia Social Media (vetrinastudiosocial.it)",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/genera-seo.mjs",
     "build": "next build",
     "start": "npx serve out",
     "postbuild": "(node scripts/ottimizza.mjs || true) && (node scripts/verifica-seo.mjs || true)",
     "verifica-seo": "node scripts/verifica-seo.mjs",
-    "ottimizza": "node scripts/ottimizza.mjs"
+    "ottimizza": "node scripts/ottimizza.mjs",
+    "genera-seo": "node scripts/genera-seo.mjs"
   },
   "dependencies": {
     "next": "^15.5.0",

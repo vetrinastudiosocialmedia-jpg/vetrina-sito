@@ -1,4 +1,5 @@
 import { SITE, CITTA, waLink } from "@/lib/site";
+import { GRUPPI, articoliDelGruppo, urlArticolo, urlGruppo } from "@/lib/articoli.mjs";
 
 const link = { color: "#BDB6A2", display: "inline-block", padding: "3px 0" };
 const titolo = { margin: "0 0 14px", fontFamily: "inherit", lineHeight: "1.4", fontSize: "12px", fontWeight: "700", letterSpacing: "0.14em", textTransform: "uppercase", color: "#D4AE6A" };
@@ -26,6 +27,24 @@ export default function Footer() {
             <li><a href="/#faq" style={link}>Domande frequenti</a></li>
           </ul>
         </nav>
+        {GRUPPI.map((g) => {
+          const lista5 = articoliDelGruppo(g.slug);
+          return (
+            <nav key={g.slug} aria-label={g.nome}>
+              <h2 style={titolo}>
+                <a href={urlGruppo(g.slug)} style={{ color: "inherit", textDecoration: "none" }}>{g.nome}</a>
+              </h2>
+              <ul style={lista}>
+                {lista5.slice(0, 5).map((a) => (
+                  <li key={a.slug}><a href={urlArticolo(a)} style={link}>{a.titoloScheda}</a></li>
+                ))}
+                {lista5.length > 5 && (
+                  <li><a href={urlGruppo(g.slug)} style={link}>Vedi tutte ({lista5.length})</a></li>
+                )}
+              </ul>
+            </nav>
+          );
+        })}
         <div>
           <h2 style={titolo}>Dove lavoriamo</h2>
           <p style={{ margin: "0" }}>Tutta Italia, online. La nostra base: {CITTA.join(" · ")}.</p>

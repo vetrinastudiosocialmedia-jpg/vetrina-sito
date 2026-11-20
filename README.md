@@ -16,6 +16,7 @@ Feito em **Next.js** (exportação estática) e hospedado no **GitHub Pages**. A
 | Planos e preços | `components/Pacchetti.jsx` |
 | Sito Vetrina | `components/SitiWeb.jsx` |
 | Portfólio | `components/Portfolio.jsx` |
+| Artigos / guias (/guide/) | `lib/articoli.mjs` |
 | Perguntas frequentes (textos) | `lib/faq.js` (o visual fica em `components/Faq.jsx`) |
 | Cidades atendidas (seção "Dove lavoriamo", rodapé e dados para o Google) | `lib/site.js` → `CITTA` |
 | Partita IVA no rodapé | `lib/site.js` → `piva` |
@@ -37,7 +38,11 @@ A ordem das seções está em `app/page.jsx`.
 
 ## SEO e IAs
 
-As regras estão em `docs/seo-content-spec.md`. Depois de cada publicação, a aba **Actions** mostra no passo `npm run build` a linha "Verifica SEO: N di N pagine approvate" e o que corrigir. Quando entrar uma página nova, ela precisa ir também para `public/sitemap.xml` e `public/llms.txt`.
+As regras estão em `docs/seo-content-spec.md`. Depois de cada publicação, a aba **Actions** mostra no passo `npm run build` a linha "Verifica SEO: N di N pagine approvate" e o que corrigir.
+
+**Artigos (guias):** todos ficam em `lib/articoli.mjs`, que é a fonte única. Dali saem as páginas `/guide/<slug>/`, o índice `/guide/`, a coluna "Guide" do rodapé e os dados para o Google. Antes de cada build, `scripts/genera-seo.mjs` confere os artigos com as regras da spec (se algo estiver errado, a publicação para e o site continua como estava) e atualiza sozinho `public/sitemap.xml`, a parte "Guide" de `public/llms.txt` e `public/llms-full.txt`. Os preços dos planos aparecem também nos artigos: se mudarem, atualize lá e a data "aggiornato".
+
+Outras páginas novas (fora das guias) precisam ser colocadas à mão em `public/sitemap.xml` e `public/llms.txt`. O registro do que foi publicado e do que foi feito no Google e no Bing fica em `docs/registro-contenuti.md`.
 
 ## Atualizar o site pelo navegador
 

@@ -74,3 +74,31 @@ section{padding-left:20px !important;padding-right:20px !important}
 .legal footer .in{max-width:820px;margin:0 auto;display:flex;flex-wrap:wrap;gap:12px 24px;justify-content:space-between}
 .legal footer nav{display:flex;flex-wrap:wrap;gap:20px}
 .legal footer a{color:#BDB6A2;font-weight:500}
+/* Guide (indice e articoli) */
+.guida .briciole ol{list-style:none;padding:0;margin:0 0 18px;display:flex;flex-wrap:wrap;gap:6px;font-size:14px;color:#5A5E4C}
+.guida .briciole li{margin:0;font-size:14px;color:#5A5E4C}
+.guida .briciole li+li::before{content:"›";margin-right:6px;color:#9A8F76}
+.guida .firma{margin-top:14px;font-size:14px;color:#5A5E4C}
+.guida .intro{font-size:18px;margin-top:16px}
+.guida .risposta{background:#FBF8F1;border-left:4px solid #9A4A1C}
+.guida .risposta-titolo,.guida .indice-titolo,.guida .chiamata-titolo{margin:0;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#9A4A1C}
+.guida .risposta p:last-child{font-size:17px}
+.guida .indice{margin-top:28px;padding:16px 20px;border:1px solid #D5CAB2;border-radius:16px}
+.guida .indice ol{margin:8px 0 0;padding-left:22px}
+.guida .indice a{display:inline-block;min-height:32px;padding:4px 0}
+.guida h3{font-size:18px;line-height:1.35;margin:26px 0 0}
+.guida .passi{margin-top:12px;padding-left:24px}
+.guida .tabella{margin-top:18px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.guida table{border-collapse:collapse;width:100%;min-width:560px;font-size:15px;background:#FBF8F1}
+.guida caption{caption-side:bottom;text-align:left;padding-top:8px;font-size:13px;color:#5A5E4C}
+.guida th,.guida td{border:1px solid #D5CAB2;padding:10px 12px;text-align:left;vertical-align:top;color:#33372A}
+.guida thead th{background:#1C2316;color:#F3ECDD;font-weight:600}
+.guida tbody th{font-weight:700}
+.guida .fonti{font-size:14px;color:#5A5E4C}
+.guida .prossimo{font-weight:600}
+.guida .elenco-guide{list-style:none;padding:0;margin:20px 0 0}
+.guida .elenco-guide li{margin:0;padding:18px 0;border-top:1px solid #D5CAB2}
+.guida .elenco-guide li>a{font-size:19px;display:inline-block;min-height:44px;padding-top:8px}
+.guida .elenco-guide p{margin-top:4px}
+.guida .meta{font-size:13px;color:#5A5E4C}
+.guida .chiamata{margin-top:48px}

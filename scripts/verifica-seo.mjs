@@ -82,6 +82,18 @@ for (const u of urls) {
   for (const m of html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
     try { JSON.parse(m[1]); } catch { prob.push("dati strutturati (JSON-LD) non validi"); }
   }
+  // Articoli (/<gruppo>/<slug>/): Article con url e date coerenti, più BreadcrumbList
+  if (/^[a-z0-9-]+\/[a-z0-9-]+\/$/.test(rel)) {
+    const blocchi = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)].map((m) => { try { return JSON.parse(m[1]); } catch { return null; } });
+    const nodi = blocchi.filter(Boolean).flatMap((b) => b["@graph"] || [b]);
+    const art = nodi.find((x) => x["@type"] === "Article");
+    if (!art) prob.push("articolo senza dati Article");
+    else {
+      if (art.url !== u || art.mainEntityOfPage !== u) prob.push("Article: url o mainEntityOfPage diversi dall'indirizzo");
+      if (!art.datePublished || !art.dateModified || art.datePublished > art.dateModified) prob.push("Article: date mancanti o pubblicazione dopo l'aggiornamento");
+    }
+    if (!nodi.some((x) => x["@type"] === "BreadcrumbList")) prob.push("articolo senza BreadcrumbList");
+  }
   if (prob.length) errori.push(...prob.map((p) => `${u}: ${p}`));
   else approvate++;
 }

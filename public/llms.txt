@@ -27,6 +27,21 @@ Tutta Italia, online, con gli stessi piani e prezzi. Base tra Modena e Bologna: 
 
 - [Domande frequenti](https://vetrinastudiosocial.it/#faq): prezzi, tutta Italia, zone, tipo di attività, riunioni, chi pubblica, uso dell'IA, cosa serve, modifiche, siti web, pagamento, disdetta.
 
+<!-- inizio guide: generato da scripts/genera-seo.mjs, non modificare a mano -->
+## Guide
+
+- [Guide per i social di bar, ristoranti e negozi](https://vetrinastudiosocial.it/guide/): indice delle guide.
+- [Quanto costa un social media manager per un'attività locale](https://vetrinastudiosocial.it/guide/quanto-costa-social-media-manager/): Prezzi per bar, ristoranti e negozi: freelance, agenzia o contenuti pronti. Tabella di confronto, costo per contenuto e cosa chiedere nel preventivo.
+- [Ogni quanto pubblicare su Instagram per un'attività locale](https://vetrinastudiosocial.it/guide/ogni-quanto-pubblicare-su-instagram/): Quanti post a settimana servono a un bar, un ristorante o un negozio: cosa dicono i dati su oltre 2 milioni di post e un piano realistico da seguire.
+- [Cosa pubblicare su Instagram per un bar: il calendario di un mese](https://vetrinastudiosocial.it/guide/cosa-pubblicare-su-instagram-bar/): Un calendario di 4 settimane pronto da copiare per l'Instagram di un bar: idee per post, Reel e Stories, più i consigli di Instagram per fare Reel che girano.
+- [Come fotografare piatti e prodotti con lo smartphone](https://vetrinastudiosocial.it/guide/foto-piatti-con-lo-smartphone/): Luce, inquadratura e formato: come fare con il telefono foto di piatti e prodotti che funzionano su Instagram, con una checklist di 10 punti prima di scattare.
+
+## Optional
+
+- [Tutti gli articoli in testo](https://vetrinastudiosocial.it/llms-full.txt)
+
+<!-- fine guide -->
+
 ## Chi siamo e contatti
 
 - [Chi siamo e come lavoriamo](https://vetrinastudiosocial.it/chi-siamo/): responsabile, come nascono i contenuti, correzioni e contatti.
