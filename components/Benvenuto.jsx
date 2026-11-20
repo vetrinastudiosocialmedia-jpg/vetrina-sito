@@ -134,7 +134,7 @@ export default function Benvenuto() {
       <header style={{ background: C.dark, padding: "18px 24px" }}>
         <div style={{ maxWidth: "860px", margin: "0 auto", display: "flex", alignItems: "center", justifyContent: "space-between", gap: "16px" }}>
           <a href="/" aria-label="Vetrina Studio, torna al sito">
-            <img src="/img/logo-vetrina.png" alt="Vetrina Studio" style={{ display: "block", height: "52px", width: "auto" }} />
+            <img decoding="async" src="/img/logo-vetrina.webp" width="400" height="107" alt="Vetrina Studio" style={{ display: "block", height: "52px", width: "auto" }} />
           </a>
           <a href="/" style={{ color: "#E6DECB", fontSize: "14px", fontWeight: 600, textDecoration: "none", minHeight: "44px", display: "inline-flex", alignItems: "center" }}>
             ← Torna al sito

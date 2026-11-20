@@ -19,25 +19,25 @@ export default function Servizi() {
               </div>
               <div style={{ flex: "1", minHeight: "0", display: "grid", gridTemplateColumns: "repeat(7, minmax(0, 1fr))", gridTemplateRows: "repeat(3, minmax(0, 1fr))", gap: "5px" }}>
                 <div style={{ borderRadius: "4px", background: "#E6DCC8" }} />
-                <img src="/img/cremi-portalo.jpg" alt="" style={{ display: "block", width: "100%", height: "100%", objectFit: "cover", borderRadius: "4px" }} />
+                <img loading="lazy" decoding="async" src="/img/cremi-portalo-320.webp" srcSet="/img/cremi-portalo-320.webp 320w, /img/cremi-portalo.webp 640w" sizes="140px" alt="" style={{ display: "block", width: "100%", height: "100%", objectFit: "cover", borderRadius: "4px" }} />
                 <div style={{ borderRadius: "4px", background: "#E6DCC8" }} />
                 <div style={{ borderRadius: "4px", background: "#E6DCC8" }} />
-                <img src="/img/lumiere-prenota.jpg" alt="" style={{ display: "block", width: "100%", height: "100%", objectFit: "cover", borderRadius: "4px" }} />
-                <div style={{ borderRadius: "4px", background: "#E6DCC8" }} />
-                <div style={{ borderRadius: "4px", background: "#E0793A" }} />
-                <div style={{ borderRadius: "4px", background: "#E6DCC8" }} />
-                <div style={{ borderRadius: "4px", background: "#E6DCC8" }} />
-                <img src="/img/cremi-x.jpg" alt="" style={{ display: "block", width: "100%", height: "100%", objectFit: "cover", borderRadius: "4px" }} />
-                <div style={{ borderRadius: "4px", background: "#E6DCC8" }} />
-                <div style={{ borderRadius: "4px", background: "#E6DCC8" }} />
-                <img src="/img/lumiere-consigli.jpg" alt="" style={{ display: "block", width: "100%", height: "100%", objectFit: "cover", borderRadius: "4px" }} />
+                <img loading="lazy" decoding="async" src="/img/lumiere-prenota-320.webp" srcSet="/img/lumiere-prenota-320.webp 320w, /img/lumiere-prenota.webp 640w" sizes="140px" alt="" style={{ display: "block", width: "100%", height: "100%", objectFit: "cover", borderRadius: "4px" }} />
                 <div style={{ borderRadius: "4px", background: "#E6DCC8" }} />
                 <div style={{ borderRadius: "4px", background: "#E0793A" }} />
                 <div style={{ borderRadius: "4px", background: "#E6DCC8" }} />
-                <img src="/img/idee-bar.jpg" alt="" style={{ display: "block", width: "100%", height: "100%", objectFit: "cover", borderRadius: "4px" }} />
+                <div style={{ borderRadius: "4px", background: "#E6DCC8" }} />
+                <img loading="lazy" decoding="async" src="/img/cremi-x-320.webp" srcSet="/img/cremi-x-320.webp 320w, /img/cremi-x.webp 640w" sizes="140px" alt="" style={{ display: "block", width: "100%", height: "100%", objectFit: "cover", borderRadius: "4px" }} />
                 <div style={{ borderRadius: "4px", background: "#E6DCC8" }} />
                 <div style={{ borderRadius: "4px", background: "#E6DCC8" }} />
-                <img src="/img/lumiere-s3.jpg" alt="" style={{ display: "block", width: "100%", height: "100%", objectFit: "cover", borderRadius: "4px" }} />
+                <img loading="lazy" decoding="async" src="/img/lumiere-consigli-320.webp" srcSet="/img/lumiere-consigli-320.webp 320w, /img/lumiere-consigli.webp 640w" sizes="140px" alt="" style={{ display: "block", width: "100%", height: "100%", objectFit: "cover", borderRadius: "4px" }} />
+                <div style={{ borderRadius: "4px", background: "#E6DCC8" }} />
+                <div style={{ borderRadius: "4px", background: "#E0793A" }} />
+                <div style={{ borderRadius: "4px", background: "#E6DCC8" }} />
+                <img loading="lazy" decoding="async" src="/img/idee-bar-320.webp" srcSet="/img/idee-bar-320.webp 320w, /img/idee-bar.webp 640w" sizes="140px" alt="" style={{ display: "block", width: "100%", height: "100%", objectFit: "cover", borderRadius: "4px" }} />
+                <div style={{ borderRadius: "4px", background: "#E6DCC8" }} />
+                <div style={{ borderRadius: "4px", background: "#E6DCC8" }} />
+                <img loading="lazy" decoding="async" src="/img/lumiere-s3-320.webp" srcSet="/img/lumiere-s3-320.webp 320w, /img/lumiere-s3.webp 640w" sizes="140px" alt="" style={{ display: "block", width: "100%", height: "100%", objectFit: "cover", borderRadius: "4px" }} />
                 <div style={{ borderRadius: "4px", background: "#E6DCC8" }} />
               </div>
             </div>
@@ -46,9 +46,9 @@ export default function Servizi() {
           </article>
           <article className="vs-card" style={{ flex: "1 1 300px", minWidth: "0", padding: "22px", borderRadius: "28px", background: "#6B4630", display: "flex", flexDirection: "column", boxShadow: "inset 0 1px 0 rgba(255,255,255,0.08), 0 40px 60px -40px rgba(0,0,0,0.7)" }}>
             <div style={{ position: "relative", height: "190px" }}>
-              <img src="/img/cremi-portalo.jpg" alt="" style={{ position: "absolute", left: "calc(50% - 150px)", top: "24px", height: "156px", aspectRatio: "4 / 5", objectFit: "cover", borderRadius: "10px", transform: "rotate(-8deg)", boxShadow: "0 16px 28px -14px rgba(0,0,0,0.7)" }} />
-              <img src="/img/lumiere-consigli.jpg" alt="" style={{ position: "absolute", left: "calc(50% + 22px)", top: "24px", height: "156px", aspectRatio: "4 / 5", objectFit: "cover", borderRadius: "10px", transform: "rotate(8deg)", boxShadow: "0 16px 28px -14px rgba(0,0,0,0.7)" }} />
-              <img src="/img/lumiere-prenota.jpg" alt="" style={{ position: "absolute", left: "calc(50% - 68px)", top: "4px", height: "170px", aspectRatio: "4 / 5", objectFit: "cover", borderRadius: "10px", boxShadow: "0 20px 34px -14px rgba(0,0,0,0.8)" }} />
+              <img loading="lazy" decoding="async" src="/img/cremi-portalo-320.webp" srcSet="/img/cremi-portalo-320.webp 320w, /img/cremi-portalo.webp 640w" sizes="140px" alt="" style={{ position: "absolute", left: "calc(50% - 150px)", top: "24px", height: "156px", aspectRatio: "4 / 5", objectFit: "cover", borderRadius: "10px", transform: "rotate(-8deg)", boxShadow: "0 16px 28px -14px rgba(0,0,0,0.7)" }} />
+              <img loading="lazy" decoding="async" src="/img/lumiere-consigli-320.webp" srcSet="/img/lumiere-consigli-320.webp 320w, /img/lumiere-consigli.webp 640w" sizes="140px" alt="" style={{ position: "absolute", left: "calc(50% + 22px)", top: "24px", height: "156px", aspectRatio: "4 / 5", objectFit: "cover", borderRadius: "10px", transform: "rotate(8deg)", boxShadow: "0 16px 28px -14px rgba(0,0,0,0.7)" }} />
+              <img loading="lazy" decoding="async" src="/img/lumiere-prenota-320.webp" srcSet="/img/lumiere-prenota-320.webp 320w, /img/lumiere-prenota.webp 640w" sizes="140px" alt="" style={{ position: "absolute", left: "calc(50% - 68px)", top: "4px", height: "170px", aspectRatio: "4 / 5", objectFit: "cover", borderRadius: "10px", boxShadow: "0 20px 34px -14px rgba(0,0,0,0.8)" }} />
             </div>
             <h3 style={{ margin: "auto 0 0", paddingTop: "24px", fontFamily: "var(--font-fraunces), Georgia, serif", fontWeight: "500", fontSize: "25px", lineHeight: "1.15", color: "#F3ECDD" }}>Post e caroselli</h3>
             <p style={{ margin: "12px 0 0", fontSize: "15.5px", lineHeight: "1.6", color: "#EFE3D3" }}>Grafiche curate e coerenti con il tuo stile, pronte per il feed.</p>
@@ -56,7 +56,7 @@ export default function Servizi() {
           <article className="vs-card" style={{ flex: "1 1 300px", minWidth: "0", padding: "22px", borderRadius: "28px", background: "#C9A27A", display: "flex", flexDirection: "column", boxShadow: "inset 0 1px 0 rgba(255,255,255,0.2), 0 40px 60px -40px rgba(0,0,0,0.7)" }}>
             <div style={{ height: "190px", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <div style={{ position: "relative", height: "190px", aspectRatio: "9 / 16", borderRadius: "20px", background: "#12160E", padding: "5px", boxShadow: "0 20px 34px -14px rgba(0,0,0,0.75)" }}>
-                <img src="/img/idee-bar.jpg" alt="" style={{ display: "block", width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", borderRadius: "16px" }} />
+                <img loading="lazy" decoding="async" src="/img/idee-bar-320.webp" srcSet="/img/idee-bar-320.webp 320w, /img/idee-bar.webp 640w" sizes="140px" alt="" style={{ display: "block", width: "100%", height: "100%", objectFit: "cover", objectPosition: "top", borderRadius: "16px" }} />
                 <div style={{ position: "absolute", inset: "5px", borderRadius: "16px", background: "linear-gradient(180deg, rgba(0,0,0,0) 55%, rgba(0,0,0,0.6) 100%)", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
                   <div style={{ width: "38px", height: "38px", borderRadius: "50%", background: "rgba(243,236,221,0.92)", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="#1C2316" aria-hidden="true">
@@ -75,7 +75,7 @@ export default function Servizi() {
           <article className="vs-card" style={{ flex: "1 1 300px", minWidth: "0", padding: "22px", borderRadius: "28px", background: "#2E3925", border: "1px solid rgba(212,174,106,0.3)", display: "flex", flexDirection: "column", boxShadow: "inset 0 1px 0 rgba(255,255,255,0.06), 0 40px 60px -40px rgba(0,0,0,0.7)" }}>
             <div style={{ height: "190px", borderRadius: "18px", background: "#F3ECDD", padding: "14px", display: "flex", flexDirection: "column", gap: "10px", color: "#1C2316", boxShadow: "0 16px 30px -18px rgba(0,0,0,0.6)" }}>
               <div style={{ display: "flex", gap: "12px", alignItems: "flex-start" }}>
-                <img src="/img/cremi-x.jpg" alt="" style={{ flex: "none", width: "52px", aspectRatio: "4 / 5", objectFit: "cover", borderRadius: "6px" }} />
+                <img loading="lazy" decoding="async" src="/img/cremi-x-320.webp" srcSet="/img/cremi-x-320.webp 320w, /img/cremi-x.webp 640w" sizes="140px" alt="" style={{ flex: "none", width: "52px", aspectRatio: "4 / 5", objectFit: "cover", borderRadius: "6px" }} />
                 <div style={{ minWidth: "0", fontSize: "12.5px", lineHeight: "1.45" }}>
                   <strong style={{ fontWeight: "700" }}>gelateria.cremi</strong>
                   {" "}Gelato come una volta: latte fresco, frutta di stagione e niente scorciatoie. Ti aspettiamo!
@@ -105,7 +105,7 @@ export default function Servizi() {
                   <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#D4AE6A" }} />
                   <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#4F6639" }} />
                 </div>
-                <img src="/img/site-desktop.jpg" alt="" style={{ display: "block", height: "159px", maxWidth: "100%", aspectRatio: "16 / 10", objectFit: "cover", objectPosition: "center top", borderRadius: "8px" }} />
+                <img loading="lazy" decoding="async" src="/img/site-desktop.webp" width="1200" height="750" alt="" style={{ display: "block", height: "159px", maxWidth: "100%", aspectRatio: "16 / 10", objectFit: "cover", objectPosition: "center top", borderRadius: "8px" }} />
               </div>
             </div>
             <h3 style={{ margin: "auto 0 0", paddingTop: "24px", fontFamily: "var(--font-fraunces), Georgia, serif", fontWeight: "500", fontSize: "25px", lineHeight: "1.15", color: "#1C2316" }}>Siti e landing page</h3>

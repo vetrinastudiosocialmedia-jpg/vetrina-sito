@@ -5,7 +5,6 @@ import ComeFunziona from "@/components/ComeFunziona";
 import Pacchetti from "@/components/Pacchetti";
 import SitiWeb from "@/components/SitiWeb";
 import Esempi from "@/components/Esempi";
-import Tracking from "@/components/Tracking";
 import Faq from "@/components/Faq";
 import Zone from "@/components/Zone";
 import Contatti from "@/components/Contatti";
@@ -51,7 +50,6 @@ export default function Home() {
       <Contatti />
       <Footer />
       <WhatsAppFloat />
-      <Tracking />
       {/* Dati strutturati per Google e per gli assistenti IA: chi siamo, servizi, prezzi, zone e FAQ (lib/schema.js) */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
     </div>

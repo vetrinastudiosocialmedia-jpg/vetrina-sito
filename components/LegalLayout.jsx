@@ -8,7 +8,7 @@ export default function LegalLayout({ title, updated, children }) {
         <header>
           <div className="in">
             <a href="/" aria-label="Vetrina Studio, torna al sito">
-              <img src="/img/logo-vetrina.png" alt="Vetrina Studio" />
+              <img decoding="async" src="/img/logo-vetrina.webp" width="400" height="107" alt="Vetrina Studio" />
             </a>
             <a className="back" href="/">← Torna al sito</a>
           </div>

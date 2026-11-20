@@ -82,10 +82,10 @@ export default function SitiWeb() {
               <span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#D4AE6A" }} />
               <span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#4F6639" }} />
             </div>
-            <img src="/img/site-desktop.jpg" alt="La home page del sito di Vetrina Studio su computer" style={{ display: "block", width: "100%", aspectRatio: "16 / 10", objectFit: "cover", objectPosition: "top", borderRadius: "8px" }} />
+            <img loading="lazy" decoding="async" src="/img/site-desktop.webp" width="1200" height="750" alt="La home page del sito di Vetrina Studio su computer" style={{ display: "block", width: "100%", aspectRatio: "16 / 10", objectFit: "cover", objectPosition: "top", borderRadius: "8px" }} />
           </div>
           <div style={{ position: "absolute", right: "-8px", bottom: "0", width: "26%", minWidth: "110px", borderRadius: "26px", background: "#12160E", padding: "7px", boxShadow: "0 40px 60px -24px rgba(0,0,0,0.85)" }}>
-            <img src="/img/site-mobile.jpg" alt="Lo stesso sito su smartphone" style={{ display: "block", width: "100%", aspectRatio: "9 / 19", objectFit: "cover", objectPosition: "top", borderRadius: "20px" }} />
+            <img loading="lazy" decoding="async" src="/img/site-mobile.webp" width="390" height="822" alt="Lo stesso sito su smartphone" style={{ display: "block", width: "100%", aspectRatio: "9 / 19", objectFit: "cover", objectPosition: "top", borderRadius: "20px" }} />
           </div>
           <figcaption style={{ marginTop: "22px", fontSize: "14.5px", color: "#E6D6C4" }}>Questo sito? L'abbiamo creato noi.</figcaption>
         </figure>

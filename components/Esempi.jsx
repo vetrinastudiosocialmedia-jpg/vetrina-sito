@@ -4,16 +4,16 @@ import { ev } from "@/lib/track";
 const serif = "var(--font-fraunces), Georgia, serif";
 
 const POST = [
-  { src: "/img/cremi-portalo.jpg", brand: "Gelateria Cremì", tipo: "Post", alt: "Post per Gelateria Cremì, progetto dimostrativo" },
-  { src: "/img/lumiere-prenota.jpg", brand: "Lumière estetica", tipo: "Post", alt: "Post per Lumière estetica, progetto dimostrativo" },
-  { src: "/img/cremi-x.jpg", brand: "Gelateria Cremì", tipo: "Post", alt: "Post per Gelateria Cremì, progetto dimostrativo" },
-  { src: "/img/lumiere-consigli.jpg", brand: "Lumière estetica", tipo: "Carosello", alt: "Carosello per Lumière estetica, progetto dimostrativo" },
+  { src: "/img/cremi-portalo.webp", small: "/img/cremi-portalo-320.webp", brand: "Gelateria Cremì", tipo: "Post", alt: "Post per Gelateria Cremì, progetto dimostrativo" },
+  { src: "/img/lumiere-prenota.webp", small: "/img/lumiere-prenota-320.webp", brand: "Lumière estetica", tipo: "Post", alt: "Post per Lumière estetica, progetto dimostrativo" },
+  { src: "/img/cremi-x.webp", small: "/img/cremi-x-320.webp", brand: "Gelateria Cremì", tipo: "Post", alt: "Post per Gelateria Cremì, progetto dimostrativo" },
+  { src: "/img/lumiere-consigli.webp", small: "/img/lumiere-consigli-320.webp", brand: "Lumière estetica", tipo: "Carosello", alt: "Carosello per Lumière estetica, progetto dimostrativo" },
 ];
 
 const ALTRI = [
-  { src: "/img/idee-bar.jpg", alt: "Carosello di idee per bar e caffetterie, progetto dimostrativo" },
-  { src: "/img/lumiere-capa.jpg", alt: "Presentazione dell'identità visiva di Lumière estetica, progetto dimostrativo" },
-  { src: "/img/lumiere-s3.jpg", alt: "Post per Lumière estetica, progetto dimostrativo" },
+  { src: "/img/idee-bar.webp", small: "/img/idee-bar-320.webp", alt: "Carosello di idee per bar e caffetterie, progetto dimostrativo" },
+  { src: "/img/lumiere-capa.webp", small: "/img/lumiere-capa-320.webp", alt: "Presentazione dell'identità visiva di Lumière estetica, progetto dimostrativo" },
+  { src: "/img/lumiere-s3.webp", small: "/img/lumiere-s3-320.webp", alt: "Post per Lumière estetica, progetto dimostrativo" },
 ];
 
 const INCLUSO = [
@@ -52,7 +52,7 @@ export default function Esempi() {
         <div className="vs-mt56" style={{ marginTop: "56px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(150px, 100%), 1fr))", gap: "22px 16px" }}>
           {POST.map((p) => (
             <figure key={p.src} style={{ margin: "0" }}>
-              <img src={p.src} alt={p.alt} loading="lazy" style={{ display: "block", width: "100%", aspectRatio: "4 / 5", objectFit: "cover", borderRadius: "22px", boxShadow: "0 30px 50px -30px rgba(28,35,22,0.6)" }} />
+              <img src={p.small} srcSet={`${p.small} 320w, ${p.src} 640w`} sizes="(max-width: 700px) 45vw, 300px" alt={p.alt} loading="lazy" decoding="async" style={{ display: "block", width: "100%", aspectRatio: "4 / 5", objectFit: "cover", borderRadius: "22px", boxShadow: "0 30px 50px -30px rgba(28,35,22,0.6)" }} />
               <figcaption style={{ marginTop: "14px", display: "flex", justifyContent: "space-between", alignItems: "center", gap: "12px", fontSize: "14.5px", color: "#4A4E3C" }}>
                 <span style={{ fontWeight: "700", color: "#1C2316" }}>{p.brand}</span>
                 <span style={{ padding: "4px 10px", borderRadius: "999px", border: "1px solid #D5CAB2", fontSize: "12.5px", fontWeight: "600" }}>{p.tipo}</span>
@@ -65,7 +65,7 @@ export default function Esempi() {
           <figure style={{ flex: "1 1 560px", minWidth: "0", margin: "0", padding: "22px", borderRadius: "26px", background: "#2B3522", color: "#F3ECDD", display: "flex", flexDirection: "column", gap: "16px" }}>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: "10px" }}>
               {ALTRI.map((p) => (
-                <img key={p.src} src={p.src} alt={p.alt} loading="lazy" style={{ display: "block", width: "100%", aspectRatio: "4 / 5", objectFit: "cover", borderRadius: "14px", boxShadow: "0 24px 40px -26px rgba(0,0,0,0.8)" }} />
+                <img key={p.src} src={p.small} srcSet={`${p.small} 320w, ${p.src} 640w`} sizes="(max-width: 700px) 30vw, 200px" alt={p.alt} loading="lazy" decoding="async" style={{ display: "block", width: "100%", aspectRatio: "4 / 5", objectFit: "cover", borderRadius: "14px", boxShadow: "0 24px 40px -26px rgba(0,0,0,0.8)" }} />
               ))}
             </div>
             <figcaption style={{ display: "flex", flexWrap: "wrap", justifyContent: "space-between", gap: "6px 16px", fontSize: "14.5px", color: "#CFC8B4" }}>

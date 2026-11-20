@@ -16,7 +16,7 @@ export default function Hero() {
       </svg>
       <header className="vs-header" style={{ position: "relative", zIndex: "5", maxWidth: "1240px", margin: "0 auto", padding: "28px 0", display: "flex", flexWrap: "wrap", alignItems: "center", justifyContent: "space-between", gap: "20px 32px" }}>
         <a href="#top" aria-label="Vetrina Studio, torna su" style={{ display: "flex", alignItems: "center", gap: "12px", textDecoration: "none", color: "#F3ECDD" }}>
-          <img className="vs-logo" src="/img/logo-vetrina.png" alt="Vetrina Studio" style={{ display: "block", height: "62px", width: "auto" }} />
+          <img decoding="async" className="vs-logo" src="/img/logo-vetrina.webp" width="400" height="107" alt="Vetrina Studio" style={{ display: "block", height: "62px", width: "auto" }} />
         </a>
         <nav className="vs-nav vs-hide-sm" aria-label="Menu principale" style={{ display: "flex", flexWrap: "wrap", gap: "32px", fontSize: "15px", fontWeight: "500" }}>
           <a href="#servizi">Servizi</a>
@@ -91,22 +91,22 @@ export default function Hero() {
                 </div>
               </div>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: "2px", paddingTop: "2px" }}>
-                <img src="/img/cremi-portalo.jpg" alt="Post per una gelateria" style={{ display: "block", width: "100%", aspectRatio: "4 / 5", objectFit: "cover" }} />
-                <img src="/img/lumiere-prenota.jpg" alt="Post per un centro estetico" style={{ display: "block", width: "100%", aspectRatio: "4 / 5", objectFit: "cover" }} />
-                <img src="/img/cremi-x.jpg" alt="Post per una gelateria" style={{ display: "block", width: "100%", aspectRatio: "4 / 5", objectFit: "cover" }} />
-                <img src="/img/lumiere-consigli.jpg" alt="Carosello di consigli" style={{ display: "block", width: "100%", aspectRatio: "4 / 5", objectFit: "cover" }} />
+                <img decoding="async" src="/img/cremi-portalo-320.webp" srcSet="/img/cremi-portalo-320.webp 320w, /img/cremi-portalo.webp 640w" sizes="130px" alt="Post per una gelateria" style={{ display: "block", width: "100%", aspectRatio: "4 / 5", objectFit: "cover" }} />
+                <img decoding="async" src="/img/lumiere-prenota-320.webp" srcSet="/img/lumiere-prenota-320.webp 320w, /img/lumiere-prenota.webp 640w" sizes="130px" alt="Post per un centro estetico" style={{ display: "block", width: "100%", aspectRatio: "4 / 5", objectFit: "cover" }} />
+                <img decoding="async" src="/img/cremi-x-320.webp" srcSet="/img/cremi-x-320.webp 320w, /img/cremi-x.webp 640w" sizes="130px" alt="Post per una gelateria" style={{ display: "block", width: "100%", aspectRatio: "4 / 5", objectFit: "cover" }} />
+                <img decoding="async" src="/img/lumiere-consigli-320.webp" srcSet="/img/lumiere-consigli-320.webp 320w, /img/lumiere-consigli.webp 640w" sizes="130px" alt="Carosello di consigli" style={{ display: "block", width: "100%", aspectRatio: "4 / 5", objectFit: "cover" }} />
                 <div style={{ aspectRatio: "4 / 5", background: "#1C2316", display: "flex", alignItems: "center", justifyContent: "center" }}>
                   <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AE6A" strokeWidth="1.6" strokeLinejoin="round" aria-hidden="true">
                     <rect x="3" y="3" width="18" height="18" rx="5" />
                     <path d="M10 8.5v7l6-3.5z" />
                   </svg>
                 </div>
-                <img src="/img/lumiere-s3.jpg" alt="Post per un centro estetico" style={{ display: "block", width: "100%", aspectRatio: "4 / 5", objectFit: "cover" }} />
-                <img src="/img/idee-bar.jpg" alt="Carosello per bar" style={{ display: "block", width: "100%", aspectRatio: "4 / 5", objectFit: "cover" }} />
+                <img decoding="async" src="/img/lumiere-s3-320.webp" srcSet="/img/lumiere-s3-320.webp 320w, /img/lumiere-s3.webp 640w" sizes="130px" alt="Post per un centro estetico" style={{ display: "block", width: "100%", aspectRatio: "4 / 5", objectFit: "cover" }} />
+                <img decoding="async" src="/img/idee-bar-320.webp" srcSet="/img/idee-bar-320.webp 320w, /img/idee-bar.webp 640w" sizes="130px" alt="Carosello per bar" style={{ display: "block", width: "100%", aspectRatio: "4 / 5", objectFit: "cover" }} />
                 <div style={{ aspectRatio: "4 / 5", background: "#E0793A", display: "flex", alignItems: "center", justifyContent: "center" }}>
                   <div style={{ fontFamily: "var(--font-fraunces), Georgia, serif", fontStyle: "italic", fontSize: "14px", color: "#1C2316" }}>Offerta</div>
                 </div>
-                <img src="/img/lumiere-capa.jpg" alt="Presentazione di un progetto" style={{ display: "block", width: "100%", aspectRatio: "4 / 5", objectFit: "cover" }} />
+                <img decoding="async" src="/img/lumiere-capa-320.webp" srcSet="/img/lumiere-capa-320.webp 320w, /img/lumiere-capa.webp 640w" sizes="130px" alt="Presentazione di un progetto" style={{ display: "block", width: "100%", aspectRatio: "4 / 5", objectFit: "cover" }} />
               </div>
             </div>
           </div>

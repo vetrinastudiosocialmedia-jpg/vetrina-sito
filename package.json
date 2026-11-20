@@ -7,8 +7,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "npx serve out",
-    "postbuild": "node scripts/verifica-seo.mjs || true",
-    "verifica-seo": "node scripts/verifica-seo.mjs"
+    "postbuild": "(node scripts/ottimizza.mjs || true) && (node scripts/verifica-seo.mjs || true)",
+    "verifica-seo": "node scripts/verifica-seo.mjs",
+    "ottimizza": "node scripts/ottimizza.mjs"
   },
   "dependencies": {
     "next": "^15.5.0",
