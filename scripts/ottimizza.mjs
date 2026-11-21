@@ -56,6 +56,8 @@ function togliJs(html) {
     const src = (attrs.match(/\bsrc="([^"]+)"/) || [])[1];
     if (src) return src.startsWith("/_next/") ? "" : tutto;
     if (/type="application\/(ld\+)?json"/.test(attrs)) return tutto;
+    // Script piccoli che devono restare (es. scadenza del banner Black Friday)
+    if (/\bdata-vs-keep\b/.test(attrs)) return tutto;
     return "";
   });
   // Preload e modulepreload di file JavaScript

@@ -105,3 +105,12 @@ section{padding-left:20px !important;padding-right:20px !important}
 .guida .elenco-guide p{margin-top:4px}
 .guida .meta{font-size:13px;color:#5A5E4C}
 .guida .chiamata{margin-top:48px}
+
+/* Black Friday (components/BlackFriday.jsx): nascosti dopo la scadenza */
+.vs-bf-off [data-bf]{display:none !important}
+.vs-bf-btn:hover{color:#F4EFE6;box-shadow:0 14px 30px -12px rgba(200,100,59,.7)}
+@media (max-width:760px){
+.vs-bf-bar{font-size:13px !important;padding:8px 14px !important}
+section.vs-bf-sec{padding:0 16px 24px !important}
+.vs-bf-btn{width:100%}
+}
