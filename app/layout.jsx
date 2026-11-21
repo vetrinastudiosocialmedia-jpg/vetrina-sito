@@ -1,6 +1,7 @@
 import { Fraunces, Manrope } from "next/font/google";
 import "./globals.css";
 import { UMAMI_ID } from "@/lib/track";
+import Consenso from "@/components/Consenso";
 
 // I caratteri vengono scaricati durante la build e serviti dal sito stesso
 // (nessuna richiesta ai server di Google da parte dei visitatori).
@@ -45,7 +46,11 @@ export default function RootLayout({ children }) {
           <script defer src="https://cloud.umami.is/script.js" data-website-id={UMAMI_ID} data-domains="vetrinastudiosocial.it" />
         ) : null}
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        {/* Banner cookie + Meta Pixel (parte solo dopo "Accetta") */}
+        <Consenso />
+      </body>
     </html>
   );
 }

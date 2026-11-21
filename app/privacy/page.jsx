@@ -1,12 +1,12 @@
 import LegalLayout from "@/components/LegalLayout";
-import { SITE, datiFiscali } from "@/lib/site";
+import { SITE, datiFiscali, META_PIXEL_ID } from "@/lib/site";
 import { UMAMI_ID } from "@/lib/track";
 
 export const metadata = { title: "Privacy policy – Vetrina Studio", description: "Come Vetrina Studio tratta i dati personali di chi visita il sito vetrinastudiosocial.it o ci scrive via email e WhatsApp, secondo il GDPR.", alternates: { canonical: "https://vetrinastudiosocial.it/privacy/" } };
 
 export default function Page() {
   return (
-    <LegalLayout title="Privacy policy" updated="19 novembre 2026">
+    <LegalLayout title="Privacy policy" updated={META_PIXEL_ID ? "21 novembre 2026" : "19 novembre 2026"}>
       <div className="box">
         <p>
           Questa informativa spiega come trattiamo i dati personali di chi visita il sito{" "}
@@ -34,6 +34,12 @@ export default function Page() {
           <strong>Dati di navigazione:</strong>
           {" "}dati tecnici (ad esempio indirizzo IP, tipo di browser, data e ora della visita) raccolti automaticamente dal fornitore dell’hosting per il funzionamento e la sicurezza del sito.
         </li>
+        {META_PIXEL_ID ? (
+          <li>
+            <strong>Pixel di Meta (solo con il tuo consenso):</strong>
+            {" "}pagine visitate, clic su WhatsApp e sui pacchetti, eventuale attivazione di un piano, dati tecnici del dispositivo e identificativi online. Dettagli nella <a href="/cookie/">Cookie policy</a>.
+          </li>
+        ) : null}
       </ul>
       <h2>3. Perché li trattiamo e su quale base</h2>
       <ul>
@@ -53,8 +59,17 @@ export default function Page() {
           <strong>Garantire il funzionamento e la sicurezza del sito</strong>
           : legittimo interesse (art. 6.1.f GDPR).
         </li>
+        {META_PIXEL_ID ? (
+          <li>
+            <strong>Misurare le nostre pubblicità su Facebook e Instagram e mostrarle a chi ha visitato il sito</strong>
+            {" "}(pixel di Meta): il tuo consenso (art. 6.1.a GDPR), che puoi revocare in qualsiasi momento dalle preferenze cookie.
+          </li>
+        ) : null}
       </ul>
-      <p>Non usiamo i tuoi dati per inviarti pubblicità senza il tuo consenso e non li vendiamo a nessuno. Non effettuiamo profilazione né decisioni automatizzate.</p>
+      <p>
+        Non usiamo i tuoi dati per inviarti pubblicità senza il tuo consenso e non li vendiamo a nessuno. Non effettuiamo decisioni automatizzate.
+        {META_PIXEL_ID ? " L’unica profilazione a fini pubblicitari è quella del pixel di Meta, attiva solo se la accetti." : " Non effettuiamo profilazione."}
+      </p>
       <h2>4. Conferimento dei dati</h2>
       <p>Fornire i dati è facoltativo, ma senza un recapito (email o numero WhatsApp) non possiamo rispondere alla tua richiesta.</p>
       <h2>5. Per quanto tempo li conserviamo</h2>
@@ -77,6 +92,12 @@ export default function Page() {
           <strong>WhatsApp (Meta)</strong>
           {" "}– se scegli di scriverci su WhatsApp;
         </li>
+        {META_PIXEL_ID ? (
+          <li>
+            <strong>Meta Platforms Ireland Ltd.</strong>
+            {" "}– pixel di Meta, solo con il tuo consenso: contitolare per la raccolta e la trasmissione dei dati, titolare autonomo per gli usi successivi;
+          </li>
+        ) : null}
         {UMAMI_ID ? <li><strong>Umami Software, Inc.</strong> – statistiche anonime delle visite, senza cookie e senza dati che ti identificano;</li> : null}
         <li><strong>Stripe Payments Europe, Ltd.</strong> – pagina di pagamento, gestione dei pagamenti e degli abbonamenti, solo per i clienti;</li>
         <li><strong>PayPal (Europe) S.à r.l. et Cie, S.C.A.</strong> e <strong>Satispay Europe S.A.</strong> – solo se scegli di pagare con questi metodi;</li>

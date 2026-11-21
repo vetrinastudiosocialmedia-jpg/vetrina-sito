@@ -1,4 +1,4 @@
-import { SITE, CITTA, waLink } from "@/lib/site";
+import { SITE, CITTA, waLink, META_PIXEL_ID } from "@/lib/site";
 import { GRUPPI, articoliDelGruppo, urlArticolo, urlGruppo } from "@/lib/articoli.mjs";
 
 const link = { color: "#BDB6A2", display: "inline-block", padding: "3px 0" };
@@ -67,6 +67,7 @@ export default function Footer() {
           <a href="/chi-siamo/" style={link}>Chi siamo e contenuti</a>
           <a href="/privacy/" style={link}>Privacy policy</a>
           <a href="/cookie/" style={link}>Cookie policy</a>
+          {META_PIXEL_ID ? <a href="/cookie/#preferenze" data-vs-cookie="" style={link}>Preferenze cookie</a> : null}
           <a href="/termini/" style={link}>Termini di servizio</a>
         </nav>
       </div>
