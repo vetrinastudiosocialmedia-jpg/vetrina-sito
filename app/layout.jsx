@@ -34,6 +34,8 @@ export const metadata = {
   robots: { index: true, follow: true, "max-image-preview": "large" },
   twitter: { card: "summary_large_image" },
   icons: { icon: "/img/favicon.png", apple: "/img/favicon.png" },
+  // Verifica del dominio su Meta (Gestione aziendale → Sicurezza del brand → Domini). Non è una password.
+  other: { "facebook-domain-verification": "vf8js6sgj0hd4af44vxwrxyezjoato" },
 };
 
 export const viewport = { themeColor: "#1C2316" };
