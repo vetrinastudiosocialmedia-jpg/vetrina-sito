@@ -56,7 +56,7 @@ export default function Page() {
       <h2 id="contenuti">Come nascono i contenuti</h2>
       <ul>
         <li>Partiamo dalle foto reali della tua attività: i tuoi piatti e i tuoi prodotti sono sempre i tuoi. Grafiche e immagini di repertorio servono solo a completare, mai al posto di ciò che vendi.</li>
-        <li>Usiamo l'intelligenza artificiale per scrivere e impaginare più velocemente. Ogni testo e ogni immagine sono controllati da una persona prima della consegna, e le immagini generate con IA vengono sempre segnalate.</li>
+        <li><strong>Contenuti creati con l'IA, rivisti da persone.</strong> Usiamo l'intelligenza artificiale per scrivere e impaginare più velocemente. Ogni testo e ogni immagine sono controllati da una persona prima della consegna, e le immagini generate con IA vengono sempre segnalate.</li>
         <li>I progetti del portfolio sono dimostrativi, con brand di fantasia e immagini generate con IA: lo indichiamo accanto a ogni progetto.</li>
         <li>Prezzi, servizi e condizioni pubblicati su questo sito sono quelli reali e aggiornati; quando cambiano, aggiorniamo anche la data in cima alla pagina.</li>
         <li>Non promettiamo numeri di follower, posizioni su Google o risultati garantiti: prepariamo contenuti curati e costanti, il resto dipende anche dall'attività e dal mercato.</li>

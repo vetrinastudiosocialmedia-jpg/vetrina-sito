@@ -45,8 +45,9 @@ export default function Home() {
       <main>
       <Hero />
       <BlackFridayBanner />
-      <Servizi />
+      {/* Prima il problema (Google, Instagram fermo, recensioni), poi cosa facciamo */}
       <Problema />
+      <Servizi />
       <ComeFunziona />
       <Esempi />
       <Pacchetti />

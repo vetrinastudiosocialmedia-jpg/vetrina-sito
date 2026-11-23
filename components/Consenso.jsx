@@ -9,23 +9,24 @@ import { META_PIXEL_ID, FINE_BLACK_FRIDAY } from "@/lib/site";
 //
 // Eventi inviati a Meta (solo con consenso):
 //  PageView su ogni pagina · Contact al clic su WhatsApp · InitiateCheckout al clic su un pacchetto
-//  · Purchase sulla pagina di benvenuto dopo il pagamento (una volta per visita).
+//  · Purchase sulla pagina di benvenuto (piani) o di ringraziamento dei kit dopo il pagamento (una volta per visita).
 //
 // È uno script piccolo scritto a mano (niente librerie) e resta nella pagina anche dopo
 // l'ottimizzazione (data-vs-keep). Il banner viene creato dallo script, quindi senza
 // JavaScript non compare e il pixel non parte.
 
 const PREZZI = { essenziale: 49, crescita: 89, pro: 99 };
+const PREZZI_KIT = { "kit-natale": 14.9, "kit-natale-recensioni": 23.9 };
 
 function codice(id) {
   return `(function(){
 var ID=${JSON.stringify(id)},K="vs-consenso",SEI_MESI=15552000000,d=document,w=window,caricato=false;
-var PREZZI=${JSON.stringify(PREZZI)},SCONTO=Date.now()<${FINE_BLACK_FRIDAY}?0.8:1;
+var PREZZI=${JSON.stringify(PREZZI)},PREZZI_KIT=${JSON.stringify(PREZZI_KIT)},SCONTO=Date.now()<${FINE_BLACK_FRIDAY}?0.8:1;
 function leggi(){try{var v=localStorage.getItem(K);if(!v)return null;var p=v.split("|");if(Date.now()-(+p[1]||0)>SEI_MESI)return null;return p[0]}catch(e){return null}}
 function salva(v){try{localStorage.setItem(K,v+"|"+Date.now())}catch(e){}}
 function ev(n,p){if(caricato&&w.fbq)w.fbq("track",n,p||{})}
-function valore(piano){return Math.round((PREZZI[piano]||0)*SCONTO*100)/100}
-function acquisto(){try{var q=new URLSearchParams(location.search);if(location.pathname.indexOf("/benvenuto")!==0||q.get("pagato")!=="1")return;if(sessionStorage.getItem("vs-px-acq"))return;sessionStorage.setItem("vs-px-acq","1");var pi=q.get("piano")||"";ev("Purchase",{value:valore(pi),currency:"EUR",content_name:pi})}catch(e){}}
+function valore(piano){if(PREZZI_KIT[piano])return PREZZI_KIT[piano];return Math.round((PREZZI[piano]||0)*SCONTO*100)/100}
+function acquisto(){try{var q=new URLSearchParams(location.search);var kit=location.pathname.indexOf("/kit-natale/grazie")===0;if((location.pathname.indexOf("/benvenuto")!==0&&!kit)||q.get("pagato")!=="1")return;if(sessionStorage.getItem("vs-px-acq"))return;sessionStorage.setItem("vs-px-acq","1");var pi=(kit?q.get("prodotto"):q.get("piano"))||"";ev("Purchase",{value:valore(pi),currency:"EUR",content_name:pi})}catch(e){}}
 function pixel(){if(caricato)return;caricato=true;
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(w,d,"script","https://connect.facebook.net/en_US/fbevents.js");
 w.fbq("consent","grant");w.fbq("init",ID);w.fbq("track","PageView");acquisto()}

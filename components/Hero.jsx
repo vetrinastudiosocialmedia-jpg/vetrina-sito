@@ -31,14 +31,14 @@ export default function Hero() {
         <div className="vs-rise" style={{ flex: "1 1 520px", minWidth: "0" }}>
           <div style={{ display: "inline-flex", alignItems: "center", gap: "10px", padding: "8px 16px", borderRadius: "999px", background: "rgba(243,236,221,0.06)", border: "1px solid rgba(243,236,221,0.14)", fontSize: "13px", fontWeight: "600", letterSpacing: "0.08em", textTransform: "uppercase", color: "#E6DECB" }}>
             <span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#E0793A" }} />
-            Social media · Siti web · Tutta Italia
+            Instagram · Google · WhatsApp · Tutta Italia
           </div>
           <h1 className="vs-h1" style={{ margin: "28px 0 0", fontFamily: "var(--font-fraunces), Georgia, serif", fontWeight: "400", fontSize: "clamp(46px, 6vw, 82px)", lineHeight: "1.02", letterSpacing: "-0.02em", textWrap: "balance" }}>
-            Il tuo negozio merita una{" "}
-            <em style={{ fontStyle: "italic", color: "#D4AE6A" }}>vetrina</em>
-            {" "}anche online.
+            Prima di entrare, i clienti ti cercano{" "}
+            <em style={{ fontStyle: "italic", color: "#D4AE6A" }}>online</em>
+            .
           </h1>
-          <p className="vs-sub" style={{ margin: "28px 0 0", maxWidth: "520px", fontSize: "19px", lineHeight: "1.6", color: "#CFC8B4", textWrap: "pretty" }}>Post, caroselli e Reels pronti da pubblicare ogni mese, e un sito che porta clienti. Con una strategia dietro, non a caso.</p>
+          <p className="vs-sub" style={{ margin: "28px 0 0", maxWidth: "520px", fontSize: "19px", lineHeight: "1.6", color: "#CFC8B4", textWrap: "pretty" }}>Leggono le recensioni su Google, guardano il tuo Instagram e ti scrivono su WhatsApp. Noi prepariamo ogni mese i post che li convincono a scegliere te, e un sito che li porta da te. Contenuti creati con l&apos;IA, rivisti da persone.</p>
           <div className="vs-cta" style={{ marginTop: "40px", display: "flex", flexWrap: "wrap", alignItems: "center", gap: "16px 28px" }}>
             <a className="vs-btn" href="#pacchetti" style={{ display: "inline-flex", alignItems: "center", gap: "12px", minHeight: "56px", padding: "0 30px", borderRadius: "999px", background: "#E0793A", color: "#1C2316", textDecoration: "none", fontSize: "16px", fontWeight: "700" }}>
               Scopri i pacchetti
@@ -60,7 +60,7 @@ export default function Hero() {
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AE6A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ flex: "none", marginTop: "1px" }}>
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
-              Contenuti pronti da pubblicare
+              Creati con l'IA, rivisti da persone
             </div>
             <div style={{ display: "flex", gap: "10px", alignItems: "flex-start", fontSize: "14.5px", lineHeight: "1.45", color: "#E6DECB" }}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AE6A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ flex: "none", marginTop: "1px" }}>

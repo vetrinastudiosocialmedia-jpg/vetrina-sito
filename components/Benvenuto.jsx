@@ -142,7 +142,7 @@ export default function Benvenuto() {
 
         <ol style={{ listStyle: "none", margin: "32px 0 0", padding: 0, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(220px, 100%), 1fr))", gap: "12px" }}>
           {[
-            ["1", pagato ? "Pagamento fatto ✓" : "Pagamento", pagato ? "Ricevuto, grazie!" : "Con carta, PayPal o Satispay."],
+            ["1", pagato ? "Pagamento fatto ✓" : "Pagamento", pagato ? "Ricevuto, grazie!" : "Con carta, Satispay o Apple Pay."],
             ["2", "Questo modulo", "Un minuto."],
             ["3", "Ti scriviamo su WhatsApp", "Per i dettagli e la consegna."],
           ].map(([n, t, d]) => (

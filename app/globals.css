@@ -124,3 +124,73 @@ section.vs-bf-sec{padding:0 16px 24px !important}
 .vs-cookie-btn button{flex:1;min-height:46px;border-radius:999px;border:0;background:#1C2316;color:#F4EFE6;font-size:15px;font-weight:800;cursor:pointer}
 .vs-cookie-btn button:hover{background:#2C3622}
 @media (max-width:760px){#vs-cookie{left:10px;bottom:10px;width:calc(100% - 20px);font-size:14px;padding:16px}}
+
+/* ---------- Kit digitali (components/KitNatale.jsx, KitGrazie.jsx) ---------- */
+.kit{background:#1C2316;color:#F3ECDD;font-family:var(--font-manrope),system-ui,sans-serif;line-height:1.6}
+.kit main{max-width:920px;margin:0 auto;padding:0 24px 72px}
+.kit-head{max-width:920px;margin:0 auto;padding:22px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.kit-head img{display:block;height:52px;width:auto}
+.kit-head-cta{display:inline-flex;align-items:center;min-height:44px;padding:0 20px;border-radius:999px;border:1px solid rgba(212,174,106,.55);color:#F3ECDD;text-decoration:none;font-size:14.5px;font-weight:700}
+.kit-hero{padding:40px 0 24px}
+.kit-eyebrow{display:inline-block;padding:7px 14px;border-radius:999px;background:rgba(243,236,221,.06);border:1px solid rgba(243,236,221,.14);font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#E6DECB}
+.kit h1{margin:22px 0 0;font-family:var(--font-fraunces),Georgia,serif;font-weight:400;font-size:clamp(36px,5.4vw,62px);line-height:1.06;letter-spacing:-.02em;text-wrap:balance}
+.kit h1 em{font-style:italic;color:#D4AE6A}
+.kit-sub{margin:22px 0 0;max-width:680px;font-size:18.5px;color:#CFC8B4}
+.kit-hero-cta{margin-top:30px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;font-size:14.5px;color:#BDB6A2}
+.kit-btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 30px;border-radius:999px;background:#E0793A;color:#1C2316;text-decoration:none;font-size:16.5px;font-weight:800;text-align:center}
+.kit-btn:hover{color:#1C2316}
+.kit-btn-2{background:transparent;border:1.5px solid #D4AE6A;color:#F3ECDD}
+.kit-btn-2:hover{color:#F3ECDD}
+.kit-sec{padding-top:64px}
+.kit h2{margin:0;font-family:var(--font-fraunces),Georgia,serif;font-weight:400;font-size:clamp(28px,3.6vw,40px);line-height:1.15;letter-spacing:-.01em}
+.kit h3{margin:36px 0 0;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#D4AE6A}
+.kit-tre{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:16px}
+.kit-tre div{padding:22px;border-radius:20px;background:rgba(243,236,221,.05);border:1px solid rgba(243,236,221,.1);color:#CFC8B4;font-size:15.5px}
+.kit-tre strong{display:block;margin-bottom:6px;color:#F3ECDD;font-size:16.5px}
+.kit-cosa,.kit-passi{margin:26px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:14px}
+.kit-passi{grid-template-columns:repeat(auto-fit,minmax(min(196px,100%),1fr))}
+.kit-cosa li,.kit-passi li{padding:20px 22px;border-radius:18px;background:#F3ECDD;color:#1C2316}
+.kit-cosa strong,.kit-passi strong{display:block;font-size:16.5px}
+.kit-cosa span,.kit-passi span{display:block;margin-top:4px;font-size:15px;color:#4A4E3C}
+.kit-passi{counter-reset:p}
+.kit-passi li{counter-increment:p}
+.kit-passi strong::before{content:counter(p) ". ";color:#9A4A1C}
+.kit-post{margin:14px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:10px}
+.kit-post li{padding:8px 14px;border-radius:999px;border:1px solid rgba(212,174,106,.4);font-size:14.5px;color:#E6DECB}
+.kit-nota-ia{margin:24px 0 0;font-size:15px;color:#BDB6A2}
+.kit-box{margin-top:26px;padding:30px;border-radius:26px;background:#F3ECDD;color:#1C2316;max-width:620px}
+.kit-prezzo{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px}
+.kit-prezzo-n{font-family:var(--font-fraunces),Georgia,serif;font-size:56px;line-height:1}
+.kit-prezzo-t{font-size:14.5px;color:#4A4E3C}
+.vs-kit-buy{position:relative;margin-top:22px;display:flex;flex-direction:column;gap:14px}
+.kit-bump-cb{position:absolute;left:20px;top:22px;width:24px;height:24px;margin:0;accent-color:#9A4A1C;cursor:pointer}
+.kit-bump{display:block;padding:18px 18px 18px 58px;border-radius:16px;border:2px dashed #9A4A1C;background:#FBF8F1;cursor:pointer;font-size:15px;line-height:1.5}
+.kit-bump strong{color:#1C2316}
+.kit-bump s{color:#6A6E5C;margin-left:4px}
+.kit-bump span{display:block;margin-top:6px;color:#4A4E3C;font-size:14.5px}
+.kit-bump-cb:focus-visible+.kit-bump{outline:2px solid #1C2316;outline-offset:2px}
+.kit-con{display:none}
+.kit-bump-cb:checked~.kit-solo{display:none}
+.kit-bump-cb:checked~.kit-con{display:inline-flex}
+.kit-bump-cb:checked+.kit-bump{border-style:solid;background:#F7E7DC}
+.kit-nota{margin:0;font-size:13.5px;color:#4A4E3C}
+.kit-msg{display:none;margin:18px 0 0;font-size:16px}
+.kit-msg a{color:#8A4B32;font-weight:700}
+.kit-msg-sempre{display:block}
+.vs-kit-prima .vs-kit-buy,.vs-kit-dopo .vs-kit-buy,.vs-kit-prima .kit-head-cta,.vs-kit-dopo .kit-head-cta{display:none}
+.vs-kit-prima .kit-msg-prima,.vs-kit-dopo .kit-msg-dopo{display:block}
+.kit-faq{border-top:1px solid rgba(243,236,221,.14);padding:4px 0}
+.kit-faq:first-of-type{margin-top:20px}
+.kit-faq summary{display:flex;justify-content:space-between;align-items:center;gap:16px;min-height:52px;font-size:17px;font-weight:600}
+.kit-faq p{margin:0 0 16px;color:#CFC8B4;font-size:15.5px}
+.kit-noi p{max-width:700px;color:#CFC8B4;font-size:16.5px}
+.kit-noi strong{color:#F3ECDD}
+.kit-dl{margin-top:28px;display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.kit-attesa{margin:0;max-width:620px;padding:16px 18px;border-radius:16px;background:rgba(243,236,221,.06);border:1px solid rgba(243,236,221,.14);color:#CFC8B4}
+.kit-attesa strong{color:#F3ECDD}
+.kit-piani{margin:22px 0 0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:12px}
+.kit-piano{display:block;padding:18px 20px;border-radius:18px;background:#F3ECDD;color:#1C2316;text-decoration:none}
+.kit-piano:hover{color:#1C2316;outline:2px solid #E0793A}
+.kit-noi .kit-piano strong{display:block;font-size:18px;color:#1C2316}
+.kit-piano span{display:block;margin-top:2px;font-size:14.5px;color:#4A4E3C}
+@media (max-width:760px){.kit section{padding-left:0 !important;padding-right:0 !important}.kit-hero{padding-top:16px !important;padding-bottom:8px !important}.kit-sec{padding-top:48px !important;padding-bottom:0 !important}.kit-head img{height:44px}.kit-box{padding:22px}.kit-btn{width:100%}}

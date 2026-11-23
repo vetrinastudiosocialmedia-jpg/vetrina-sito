@@ -6,7 +6,7 @@ export default function Problema() {
         <div style={{ flex: "1 1 440px", minWidth: "0" }}>
           <div style={{ fontSize: "13px", fontWeight: "700", letterSpacing: "0.16em", textTransform: "uppercase", color: "#9A4A1C" }}>Ti suona familiare?</div>
           <h2 style={{ margin: "18px 0 0", fontFamily: "var(--font-fraunces), Georgia, serif", fontWeight: "400", fontSize: "clamp(34px, 4vw, 54px)", lineHeight: "1.08", letterSpacing: "-0.015em", textWrap: "balance" }}>
-            Sai che dovresti pubblicare. Il problema è trovare il tempo{" "}
+            Sai che dovresti esserci. Il problema è trovare il tempo{" "}
             <em style={{ fontStyle: "italic", color: "#8A4B32" }}>(e le idee)</em>
             .
           </h2>
@@ -61,22 +61,22 @@ export default function Problema() {
           <div style={{ padding: "30px 0", borderTop: "1px solid #D5CAB2", display: "flex", gap: "24px" }}>
             <div style={{ flex: "none", fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: "22px", color: "#9A4A1C" }}>01</div>
             <div>
-              <h3 style={{ margin: "0", fontSize: "20px", fontWeight: "700" }}>Non sai mai cosa pubblicare</h3>
-              <p style={{ margin: "10px 0 0", fontSize: "16px", lineHeight: "1.65", color: "#4A4E3C" }}>Ti ritrovi davanti al telefono senza idee. Noi arriviamo con il mese già pianificato.</p>
+              <h3 style={{ margin: "0", fontSize: "20px", fontWeight: "700" }}>Ti cercano su Google e trovano poco</h3>
+              <p style={{ margin: "10px 0 0", fontSize: "16px", lineHeight: "1.65", color: "#4A4E3C" }}>Orari vecchi, poche foto, recensioni senza risposta: su Google Maps chi ti cerca sceglie chi sembra più curato. Ti diciamo cosa sistemare.</p>
             </div>
           </div>
           <div style={{ padding: "30px 0", borderTop: "1px solid #D5CAB2", display: "flex", gap: "24px" }}>
             <div style={{ flex: "none", fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: "22px", color: "#9A4A1C" }}>02</div>
             <div>
-              <h3 style={{ margin: "0", fontSize: "20px", fontWeight: "700" }}>Le grafiche fatte di fretta non rendono</h3>
-              <p style={{ margin: "10px 0 0", fontSize: "16px", lineHeight: "1.65", color: "#4A4E3C" }}>Un'immagine curata comunica qualità prima ancora che il cliente entri dalla porta.</p>
+              <h3 style={{ margin: "0", fontSize: "20px", fontWeight: "700" }}>Il profilo Instagram è fermo</h3>
+              <p style={{ margin: "10px 0 0", fontSize: "16px", lineHeight: "1.65", color: "#4A4E3C" }}>Ultimo post tre mesi fa: sembra che tu abbia chiuso. Con il mese già pianificato e i post pronti, non sparisci più.</p>
             </div>
           </div>
           <div style={{ padding: "30px 0", borderTop: "1px solid #D5CAB2", borderBottom: "1px solid #D5CAB2", display: "flex", gap: "24px" }}>
             <div style={{ flex: "none", fontFamily: "var(--font-fraunces), Georgia, serif", fontSize: "22px", color: "#9A4A1C" }}>03</div>
             <div>
-              <h3 style={{ margin: "0", fontSize: "20px", fontWeight: "700" }}>Pubblichi a periodi, poi sparisci</h3>
-              <p style={{ margin: "10px 0 0", fontSize: "16px", lineHeight: "1.65", color: "#4A4E3C" }}>La costanza è ciò che fa crescere un profilo. Con i contenuti già pronti, non salti più un mese.</p>
+              <h3 style={{ margin: "0", fontSize: "20px", fontWeight: "700" }}>Hai poche recensioni su Google</h3>
+              <p style={{ margin: "10px 0 0", fontSize: "16px", lineHeight: "1.65", color: "#4A4E3C" }}>Chi non ti conosce le legge prima di tutto. Nei post e nelle Stories ricordiamo ai clienti contenti di lasciarne una: è il modo più semplice per averne di più.</p>
             </div>
           </div>
         </div>
