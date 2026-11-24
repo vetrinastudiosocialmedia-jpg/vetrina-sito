@@ -38,7 +38,7 @@ export default function Hero() {
             <em style={{ fontStyle: "italic", color: "#D4AE6A" }}>online</em>
             .
           </h1>
-          <p className="vs-sub" style={{ margin: "28px 0 0", maxWidth: "520px", fontSize: "19px", lineHeight: "1.6", color: "#CFC8B4", textWrap: "pretty" }}>Leggono le recensioni su Google, guardano il tuo Instagram e ti scrivono su WhatsApp. Noi prepariamo ogni mese i post che li convincono a scegliere te, e un sito che li porta da te. Contenuti creati con l&apos;IA, rivisti da persone.</p>
+          <p className="vs-sub" style={{ margin: "28px 0 0", maxWidth: "520px", fontSize: "19px", lineHeight: "1.6", color: "#CFC8B4", textWrap: "pretty" }}>Leggono le recensioni su Google, guardano il tuo Instagram e ti scrivono su WhatsApp. Noi prepariamo ogni mese i post che li convincono a scegliere te, e un sito che li porta da te.</p>
           <div className="vs-cta" style={{ marginTop: "40px", display: "flex", flexWrap: "wrap", alignItems: "center", gap: "16px 28px" }}>
             <a className="vs-btn" href="#pacchetti" style={{ display: "inline-flex", alignItems: "center", gap: "12px", minHeight: "56px", padding: "0 30px", borderRadius: "999px", background: "#E0793A", color: "#1C2316", textDecoration: "none", fontSize: "16px", fontWeight: "700" }}>
               Scopri i pacchetti
@@ -60,7 +60,7 @@ export default function Hero() {
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AE6A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ flex: "none", marginTop: "1px" }}>
                 <path d="M5 12.5l4.5 4.5L19 7.5" />
               </svg>
-              Creati con l'IA, rivisti da persone
+              Contenuti pronti da pubblicare
             </div>
             <div style={{ display: "flex", gap: "10px", alignItems: "flex-start", fontSize: "14.5px", lineHeight: "1.45", color: "#E6DECB" }}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AE6A" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" style={{ flex: "none", marginTop: "1px" }}>
