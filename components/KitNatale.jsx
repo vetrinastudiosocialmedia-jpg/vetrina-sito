@@ -46,7 +46,7 @@ const FAQ = [
   ["E se lo compro a metà dicembre?", "Lo usi lo stesso. Metà dei post non hanno una data fissa (offerte, buono regalo, dietro le quinte, recensioni) e vanno bene in qualsiasi giorno delle feste."],
   ["Quanto tempo ci vuole?", "Circa 2 ore per preparare e programmare tutto dicembre, una volta sola."],
   ["Come lo ricevo?", "Subito dopo il pagamento si apre la pagina con il link al kit. Ti arriva anche la ricevuta via email."],
-  ["Chi ha fatto i modelli?", "Noi di Vetrina Studio: contenuti creati con l'IA, rivisti da persone. Le foto le metti tu, del tuo locale: sono quelle che funzionano di più."],
+  ["Chi ha fatto i modelli?", "Noi di Vetrina Studio. Le foto le metti tu, del tuo locale: sono quelle che funzionano di più."],
 ];
 
 const STATO = `(function(){var n=Date.now(),h=document.documentElement;if(n<${INIZIO_KIT_NATALE})h.classList.add("vs-kit-prima");else if(n>=${FINE_KIT_NATALE})h.classList.add("vs-kit-dopo")})()`;
@@ -131,7 +131,7 @@ export default function KitNatale() {
             <ul className="kit-post">
               {POST.map((p) => <li key={p}>{p}</li>)}
             </ul>
-            <p className="kit-nota-ia">Stile elegante e caldo, senza Babbo Natale clip-art né glitter: sembra fatto da un designer, perché il tuo locale non è un volantino. Contenuti creati con l'IA, rivisti da persone.</p>
+            <p className="kit-nota-ia">Stile elegante e caldo, senza Babbo Natale clip-art né glitter: sembra fatto da un designer, perché il tuo locale non è un volantino.</p>
           </section>
 
           <section className="kit-sec" aria-labelledby="kit-passi">

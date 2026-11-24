@@ -44,9 +44,6 @@ export default function Esempi() {
           <p style={{ margin: "20px 0 0", fontSize: "18px", lineHeight: "1.65", color: "#4A4E3C", textWrap: "pretty" }}>
             Post e caroselli con lo stile della tua attività, pronti da pubblicare. Guardali prima di scegliere il pacchetto.
           </p>
-          <p style={{ margin: "10px 0 0", fontSize: "14px", lineHeight: "1.6", color: "#6A6D5A" }}>
-            Progetti dimostrativi realizzati con brand di fantasia. Immagini generate con IA.
-          </p>
         </div>
 
         <div className="vs-mt56" style={{ marginTop: "56px", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(150px, 100%), 1fr))", gap: "22px 16px" }}>

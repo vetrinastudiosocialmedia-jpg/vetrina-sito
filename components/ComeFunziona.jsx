@@ -55,8 +55,8 @@ export default function ComeFunziona() {
                   <path d="M18 16l.8 2.2L21 19l-2.2.8L18 22l-.8-2.2L15 19l2.2-.8z" />
                 </svg>
               </div>
-              <h3 style={{ margin: "0", fontSize: "19px", fontWeight: "700" }}>Creati con l'IA, rivisti da persone</h3>
-              <p style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.65", color: "#4A4E3C" }}>L'IA ci fa lavorare più veloce, ed è per questo che i prezzi sono bassi. Ogni testo e ogni immagine sono controllati da una persona prima di arrivare a te.</p>
+              <h3 style={{ margin: "0", fontSize: "19px", fontWeight: "700" }}>Tecnologia e controllo umano</h3>
+              <p style={{ margin: "0", fontSize: "15.5px", lineHeight: "1.65", color: "#4A4E3C" }}>Usiamo l'IA per lavorare più veloce, ma ogni contenuto è controllato da una persona.</p>
             </div>
             <div style={{ paddingTop: "24px", borderTop: "1px solid #CDBF9F", display: "flex", flexDirection: "column", gap: "14px" }}>
               <div style={{ width: "48px", height: "48px", borderRadius: "50%", background: "#2B3522", display: "flex", alignItems: "center", justifyContent: "center" }}>
