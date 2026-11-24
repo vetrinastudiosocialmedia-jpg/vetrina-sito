@@ -224,7 +224,7 @@ export default async function Page({ params }) {
           </ul>
         </section>
 
-        <Chiamata />
+        <Chiamata tema={a.chiamata} />
       </article>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(datiStrutturati(a, gruppo)).replace(/</g, "\\u003c") }} />
     </GuideLayout>

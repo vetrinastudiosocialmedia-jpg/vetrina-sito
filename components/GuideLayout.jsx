@@ -1,4 +1,6 @@
 import Footer from "@/components/Footer";
+import { waLink } from "@/lib/site";
+import { ev } from "@/lib/track";
 
 // Struttura delle pagine delle guide (indice e articoli): stessa testata delle pagine
 // secondarie, contenuto libero, stesso piè di pagina del sito.
@@ -36,8 +38,37 @@ export function Briciole({ voci }) {
   );
 }
 
-// Box finale con la chiamata al servizio
-export function Chiamata() {
+// Box finale con la chiamata al servizio.
+// tema "recensioni" e "google": invito a scriverci su WhatsApp (risposte alle recensioni, scheda Google);
+// per tutti gli altri articoli: i piani mensili.
+const CHIAMATE = {
+  recensioni: {
+    titolo: "Non hai tempo di rispondere alle recensioni?",
+    testo: "Ti aiutiamo noi: prepariamo le risposte alle tue recensioni e i post per chiederne di nuove, tu le copi e pubblichi. Senza darci accesso al tuo account.",
+    link: "Scrivici su WhatsApp →",
+    messaggio: "Ciao! Ho letto la vostra guida sulle recensioni e vorrei un aiuto.",
+  },
+  google: {
+    titolo: "Vuoi una scheda Google sistemata?",
+    testo: "Controlliamo e sistemiamo la tua scheda Google: categoria, orari, descrizione, foto e servizi, così chi ti cerca su Maps trova tutto quello che serve.",
+    link: "Scrivici su WhatsApp →",
+    messaggio: "Ciao! Ho letto la vostra guida su Google Maps e vorrei sistemare la mia scheda.",
+  },
+};
+
+export function Chiamata({ tema } = {}) {
+  const c = CHIAMATE[tema];
+  if (c) {
+    return (
+      <div className="box chiamata">
+        <p className="chiamata-titolo">{c.titolo}</p>
+        <p>{c.testo}</p>
+        <p>
+          <a href={waLink(c.messaggio)} {...ev("WhatsApp", { origine: `guida-${tema}` })}>{c.link}</a>
+        </p>
+      </div>
+    );
+  }
   return (
     <div className="box chiamata">
       <p className="chiamata-titolo">Vuoi i contenuti pronti ogni mese?</p>
