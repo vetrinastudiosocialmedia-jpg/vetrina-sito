@@ -1,4 +1,4 @@
-import { META_PIXEL_ID, FINE_BLACK_FRIDAY } from "@/lib/site";
+import { META_PIXEL_ID } from "@/lib/site";
 
 // Banner dei cookie + Meta Pixel, su tutte le pagine (inserito in app/layout.jsx).
 //
@@ -21,11 +21,11 @@ const PREZZI_KIT = { "kit-natale": 14.9, "kit-natale-recensioni": 23.9 };
 function codice(id) {
   return `(function(){
 var ID=${JSON.stringify(id)},K="vs-consenso",SEI_MESI=15552000000,d=document,w=window,caricato=false;
-var PREZZI=${JSON.stringify(PREZZI)},PREZZI_KIT=${JSON.stringify(PREZZI_KIT)},SCONTO=Date.now()<${FINE_BLACK_FRIDAY}?0.8:1;
+var PREZZI=${JSON.stringify(PREZZI)},PREZZI_KIT=${JSON.stringify(PREZZI_KIT)};
 function leggi(){try{var v=localStorage.getItem(K);if(!v)return null;var p=v.split("|");if(Date.now()-(+p[1]||0)>SEI_MESI)return null;return p[0]}catch(e){return null}}
 function salva(v){try{localStorage.setItem(K,v+"|"+Date.now())}catch(e){}}
 function ev(n,p){if(caricato&&w.fbq)w.fbq("track",n,p||{})}
-function valore(piano){if(PREZZI_KIT[piano])return PREZZI_KIT[piano];return Math.round((PREZZI[piano]||0)*SCONTO*100)/100}
+function valore(piano){if(PREZZI_KIT[piano])return PREZZI_KIT[piano];return PREZZI[piano]||0}
 function acquisto(){try{var q=new URLSearchParams(location.search);var kit=location.pathname.indexOf("/kit-natale/grazie")===0;if((location.pathname.indexOf("/benvenuto")!==0&&!kit)||q.get("pagato")!=="1")return;if(sessionStorage.getItem("vs-px-acq"))return;sessionStorage.setItem("vs-px-acq","1");var pi=(kit?q.get("prodotto"):q.get("piano"))||"";ev("Purchase",{value:valore(pi),currency:"EUR",content_name:pi})}catch(e){}}
 function pixel(){if(caricato)return;caricato=true;
 !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(w,d,"script","https://connect.facebook.net/en_US/fbevents.js");

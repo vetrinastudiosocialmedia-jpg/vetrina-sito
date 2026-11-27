@@ -10,7 +10,6 @@ import Zone from "@/components/Zone";
 import Contatti from "@/components/Contatti";
 import Footer from "@/components/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
-import { BlackFridayBar, BlackFridayBanner } from "@/components/BlackFriday";
 import { jsonLd } from "@/lib/schema";
 
 // Indirizzo ufficiale della home (evita duplicati per Google)
@@ -31,8 +30,6 @@ export const metadata = {
 export default function Home() {
   return (
     <>
-    {/* Black Friday: barra fissa in alto (fuori dal contenitore, così resta visibile scorrendo) */}
-    <BlackFridayBar />
     <div
       style={{
         width: "100%",
@@ -44,7 +41,6 @@ export default function Home() {
     >
       <main>
       <Hero />
-      <BlackFridayBanner />
       {/* Prima il problema (Google, Instagram fermo, recensioni), poi cosa facciamo */}
       <Problema />
       <Servizi />
